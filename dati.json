@@ -1,0 +1,770 @@
+{
+ "aggiornato": "2026-10-27T18:19+01:00",
+ "dal": "2026-10-18",
+ "totale": 55,
+ "sessioni": 13,
+ "skill": {
+  "trader-alerts": {
+   "distretto": "finanza",
+   "sprite": "trader-alerts",
+   "cosa_fa": "Suona quando un prezzo, uno stop o l'apertura vengono raggiunti; trasforma il piano del trade in tre allarmi in un colpo.",
+   "oggetto": "Campanella che suona",
+   "infra": [
+    "dati",
+    "pacchetto"
+   ],
+   "notion": "https://www.notion.so/406fcd1c89c68136a3a9e0f86cc35e89",
+   "chiamate": 15,
+   "giorni": {
+    "2026-10-26": 2,
+    "2026-10-27": 13
+   },
+   "modi": {
+    "Script": 15
+   },
+   "ultimo": "2026-10-27",
+   "insieme": {
+    "trader-backtest": 1,
+    "trader-data": 4,
+    "trader-pro": 1,
+    "trader-entry": 1,
+    "trader-exit": 1,
+    "trader-broker": 5,
+    "trader-risk": 1,
+    "update-config": 1
+   }
+  },
+  "trader-analyst": {
+   "distretto": "finanza",
+   "sprite": "trader-analyst",
+   "cosa_fa": "Legge i conti di una società direttamente da SEC EDGAR (10-Q, 10-K, 8-K con il comunicato) e riassume cosa è cambiato.",
+   "oggetto": "Cartellina con il report e le barre",
+   "infra": [
+    "edgar",
+    "pacchetto"
+   ],
+   "notion": "https://www.notion.so/406fcd1c89c68141a2dcc4a589975fb9",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "trader-backtest": {
+   "distretto": "finanza",
+   "sprite": "trader-backtest",
+   "cosa_fa": "Testa un setup su tutti i titoli in cache con costi veri: commissioni, slippage ed esecuzione alla barra successiva.",
+   "oggetto": "Calcolatrice: i costi sono sempre inclusi",
+   "infra": [
+    "dati",
+    "pacchetto"
+   ],
+   "notion": "https://www.notion.so/406fcd1c89c6812eb575ce3336c1d9ea",
+   "chiamate": 3,
+   "giorni": {
+    "2026-10-26": 2,
+    "2026-10-27": 1
+   },
+   "modi": {
+    "Script": 3
+   },
+   "ultimo": "2026-10-27",
+   "insieme": {
+    "trader-data": 4,
+    "trader-alerts": 1,
+    "trader-pro": 1
+   }
+  },
+  "trader-broker": {
+   "distretto": "finanza",
+   "sprite": "trader-broker",
+   "cosa_fa": "Manda al broker gli ordini approvati, in paper trading di default e mai senza il tuo sì.",
+   "oggetto": "Biglietto dell'ordine con il timbro dell'ok",
+   "infra": [
+    "broker",
+    "pacchetto"
+   ],
+   "notion": "https://www.notion.so/406fcd1c89c6810e8ac2d0db3fb321dd",
+   "chiamate": 4,
+   "giorni": {
+    "2026-10-27": 4
+   },
+   "modi": {
+    "Script": 4
+   },
+   "ultimo": "2026-10-27",
+   "insieme": {
+    "trader-timemachine": 1,
+    "trader-alerts": 5,
+    "trader-risk": 1
+   }
+  },
+  "trader-budget": {
+   "distretto": "finanza",
+   "sprite": "trader-budget",
+   "cosa_fa": "Dimensiona ogni posizione sul tuo budget e sulla perdita massima per trade, in azioni intere.",
+   "oggetto": "Salvadanaio: la moneta cade nella fessura",
+   "infra": [
+    "broker",
+    "pacchetto"
+   ],
+   "notion": "https://www.notion.so/406fcd1c89c681b1a1eddcf75ec21c1b",
+   "chiamate": 1,
+   "giorni": {
+    "2026-10-27": 1
+   },
+   "modi": {
+    "Script": 1
+   },
+   "ultimo": "2026-10-27",
+   "insieme": {
+    "trader-exit": 1,
+    "trader-risk": 1
+   }
+  },
+  "trader-data": {
+   "distretto": "finanza",
+   "sprite": "trader-data",
+   "cosa_fa": "Fornisce i dati di mercato a tutto il pacchetto: dalla fonte ufficiale Alpaca quando ci sono le chiavi, altrimenti gratis da Yahoo.",
+   "oggetto": "Parabola sulla testa: è la centrale della rete dati",
+   "infra": [
+    "dati",
+    "pacchetto"
+   ],
+   "notion": "https://www.notion.so/406fcd1c89c68134acd6ef482a326a99",
+   "chiamate": 9,
+   "giorni": {
+    "2026-10-26": 7,
+    "2026-10-27": 2
+   },
+   "modi": {
+    "Script": 9
+   },
+   "ultimo": "2026-10-27",
+   "insieme": {
+    "trader-backtest": 4,
+    "trader-alerts": 4,
+    "trader-scanner": 1
+   }
+  },
+  "trader-entry": {
+   "distretto": "finanza",
+   "sprite": "trader-entry",
+   "cosa_fa": "Segue un setup barra per barra e ti dice il momento esatto per entrare.",
+   "oggetto": "Cronometro: la lancetta gira fino al momento giusto",
+   "infra": [
+    "dati",
+    "pacchetto"
+   ],
+   "notion": "https://www.notion.so/406fcd1c89c6818c910cf4c136a0b01b",
+   "chiamate": 2,
+   "giorni": {
+    "2026-10-27": 2
+   },
+   "modi": {
+    "Script": 2
+   },
+   "ultimo": "2026-10-27",
+   "insieme": {
+    "trader-scanner": 1,
+    "trader-news": 2,
+    "trader-alerts": 1
+   }
+  },
+  "trader-exit": {
+   "distretto": "finanza",
+   "sprite": "trader-exit",
+   "cosa_fa": "Fissa stop e target prima di entrare, così sai già quando uscire.",
+   "oggetto": "Cartello di STOP: lo stop-loss",
+   "infra": [
+    "dati",
+    "pacchetto"
+   ],
+   "notion": "https://www.notion.so/406fcd1c89c68165a11cddb502ee7fa4",
+   "chiamate": 1,
+   "giorni": {
+    "2026-10-27": 1
+   },
+   "modi": {
+    "Script": 1
+   },
+   "ultimo": "2026-10-27",
+   "insieme": {
+    "trader-alerts": 1,
+    "trader-budget": 1
+   }
+  },
+  "trader-journal": {
+   "distretto": "finanza",
+   "sprite": "trader-journal",
+   "cosa_fa": "Trasforma gli eseguiti del broker in trade chiusi con il risultato vero dopo i costi, e fa da interruttore automatico quando le cose vanno male.",
+   "oggetto": "Quaderno a spirale con la matita",
+   "infra": [
+    "broker",
+    "pacchetto"
+   ],
+   "notion": "https://www.notion.so/406fcd1c89c6817d8ffdc58d9813f64b",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "trader-news": {
+   "distretto": "finanza",
+   "sprite": "trader-news",
+   "cosa_fa": "Segue le notizie su ogni titolo che guardi e segnala cosa lo muove: titoli Yahoo Finance e documenti 8-K su SEC EDGAR.",
+   "oggetto": "Giornale con titolo e foto",
+   "infra": [
+    "dati",
+    "edgar",
+    "pacchetto"
+   ],
+   "notion": "https://www.notion.so/406fcd1c89c681e393b5e97c3e6694f4",
+   "chiamate": 1,
+   "giorni": {
+    "2026-10-27": 1
+   },
+   "modi": {
+    "Script": 1
+   },
+   "ultimo": "2026-10-27",
+   "insieme": {
+    "trader-entry": 2
+   }
+  },
+  "trader-pelosi": {
+   "distretto": "finanza",
+   "sprite": "trader-pelosi",
+   "cosa_fa": "Segue gli acquisti di azioni che i membri del Congresso USA devono dichiarare per legge (STOCK Act), entro un giorno dalla pubblicazione.",
+   "oggetto": "Modellino del Campidoglio",
+   "infra": [
+    "pacchetto"
+   ],
+   "notion": "https://www.notion.so/406fcd1c89c681c5b3b5efb1175a5d95",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "trader-pro": {
+   "distretto": "finanza",
+   "sprite": "trader-pro",
+   "cosa_fa": "Fa lavorare tutto il pacchetto come una vera scrivania di trading: prima le prove, una routine fissa, rischio fisso, un diario e nessun trade senza un vantaggio dimostrato.",
+   "oggetto": "Valigetta: è il capo del distretto",
+   "infra": [
+    "pacchetto"
+   ],
+   "notion": "https://www.notion.so/406fcd1c89c68103925bea8865c4fa7a",
+   "chiamate": 1,
+   "giorni": {
+    "2026-10-27": 1
+   },
+   "modi": {
+    "Caricata da Claude": 1
+   },
+   "ultimo": "2026-10-27",
+   "insieme": {
+    "trader-alerts": 1,
+    "trader-backtest": 1
+   }
+  },
+  "trader-risk": {
+   "distretto": "finanza",
+   "sprite": "trader-risk",
+   "cosa_fa": "Controlla ogni trade contro i tuoi limiti e blocca tutto ciò che li supera, prima che arrivi al broker.",
+   "oggetto": "Scudo con la spunta",
+   "infra": [
+    "broker",
+    "pacchetto"
+   ],
+   "notion": "https://www.notion.so/406fcd1c89c6816f9afeef77891e6094",
+   "chiamate": 2,
+   "giorni": {
+    "2026-10-27": 2
+   },
+   "modi": {
+    "Script": 2
+   },
+   "ultimo": "2026-10-27",
+   "insieme": {
+    "trader-budget": 1,
+    "trader-timemachine": 1,
+    "trader-broker": 1,
+    "trader-alerts": 1
+   }
+  },
+  "trader-scanner": {
+   "distretto": "finanza",
+   "sprite": "trader-scanner",
+   "cosa_fa": "Scansiona migliaia di grafici in cerca di setup: rotture del range di apertura, bandiere, rimbalzi da ipervenduto.",
+   "oggetto": "Lente d'ingrandimento: scruta i grafici da sinistra a destra",
+   "infra": [
+    "dati",
+    "pacchetto"
+   ],
+   "notion": "https://www.notion.so/406fcd1c89c681698556ec111a7307c0",
+   "chiamate": 1,
+   "giorni": {
+    "2026-10-27": 1
+   },
+   "modi": {
+    "Script": 1
+   },
+   "ultimo": "2026-10-27",
+   "insieme": {
+    "trader-data": 1,
+    "trader-entry": 1
+   }
+  },
+  "trader-timemachine": {
+   "distretto": "finanza",
+   "sprite": "trader-timemachine",
+   "cosa_fa": "Rigioca un trade pianificato 10.000 volte sugli ultimi 60 giorni del titolo, prima che tu rischi un dollaro.",
+   "oggetto": "Clessidra: la sabbia scende, il tempo si riavvolge",
+   "infra": [
+    "dati",
+    "pacchetto"
+   ],
+   "notion": "https://www.notion.so/406fcd1c89c681c7b259caab7f6386f6",
+   "chiamate": 1,
+   "giorni": {
+    "2026-10-27": 1
+   },
+   "modi": {
+    "Script": 1
+   },
+   "ultimo": "2026-10-27",
+   "insieme": {
+    "trader-risk": 1,
+    "trader-broker": 1
+   }
+  },
+  "scientific-thinking-literature-review": {
+   "distretto": "universita",
+   "sprite": "literature-review",
+   "infra": [],
+   "notion": null,
+   "oggetto": "Libro rosso e zaino blu",
+   "cosa_fa": "Fa una rassegna sistematica della letteratura: piano di ricerca, selezione delle fonti, sintesi e controllo delle citazioni.",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "security-scan": {
+   "distretto": "sicurezza",
+   "sprite": "security-scan",
+   "infra": [],
+   "notion": null,
+   "oggetto": "Cappello e stella da sceriffo",
+   "cosa_fa": "Controlla la configurazione di Claude Code (.claude/, settings, hook, server MCP) in cerca di falle e rischi di injection.",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "skill-stocktake": {
+   "distretto": "municipio",
+   "sprite": "skill-stocktake",
+   "infra": [],
+   "notion": null,
+   "oggetto": "Fascia tricolore e cilindro",
+   "cosa_fa": "Fa l'inventario delle skill e dei comandi installati e ne valuta la qualità, una per una.",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "anthropic-skills:free-llm-apis": {
+   "distretto": null,
+   "sprite": null,
+   "cosa_fa": null,
+   "oggetto": null,
+   "infra": [],
+   "notion": null,
+   "chiamate": 1,
+   "giorni": {
+    "2026-10-18": 1
+   },
+   "modi": {
+    "Comando /": 1
+   },
+   "ultimo": "2026-10-18",
+   "insieme": {
+    "skill-scout": 1
+   }
+  },
+  "skill-scout": {
+   "distretto": null,
+   "sprite": null,
+   "cosa_fa": null,
+   "oggetto": null,
+   "infra": [],
+   "notion": null,
+   "chiamate": 8,
+   "giorni": {
+    "2026-10-18": 1,
+    "2026-10-19": 1,
+    "2026-10-25": 3,
+    "2026-10-26": 2,
+    "2026-10-27": 1
+   },
+   "modi": {
+    "Caricata da Claude": 7,
+    "Comando /": 1
+   },
+   "ultimo": "2026-10-27",
+   "insieme": {
+    "anthropic-skills:free-llm-apis": 1,
+    "pixel-art-studio": 1
+   }
+  },
+  "anthropic-skills:pptx": {
+   "distretto": null,
+   "sprite": null,
+   "cosa_fa": null,
+   "oggetto": null,
+   "infra": [],
+   "notion": null,
+   "chiamate": 1,
+   "giorni": {
+    "2026-10-18": 1
+   },
+   "modi": {
+    "Caricata da Claude": 1
+   },
+   "ultimo": "2026-10-18",
+   "insieme": {
+    "anthropic-skills:docx": 1
+   }
+  },
+  "anthropic-skills:docx": {
+   "distretto": null,
+   "sprite": null,
+   "cosa_fa": null,
+   "oggetto": null,
+   "infra": [],
+   "notion": null,
+   "chiamate": 1,
+   "giorni": {
+    "2026-10-18": 1
+   },
+   "modi": {
+    "Caricata da Claude": 1
+   },
+   "ultimo": "2026-10-18",
+   "insieme": {
+    "anthropic-skills:pptx": 1
+   }
+  },
+  "workflow-authoring": {
+   "distretto": null,
+   "sprite": null,
+   "cosa_fa": null,
+   "oggetto": null,
+   "infra": [],
+   "notion": null,
+   "chiamate": 1,
+   "giorni": {
+    "2026-10-21": 1
+   },
+   "modi": {
+    "Comando /": 1
+   },
+   "ultimo": "2026-10-21",
+   "insieme": {}
+  },
+  "pixel-art-studio": {
+   "distretto": null,
+   "sprite": null,
+   "cosa_fa": null,
+   "oggetto": null,
+   "infra": [],
+   "notion": null,
+   "chiamate": 1,
+   "giorni": {
+    "2026-10-27": 1
+   },
+   "modi": {
+    "Caricata da Claude": 1
+   },
+   "ultimo": "2026-10-27",
+   "insieme": {
+    "skill-scout": 1
+   }
+  },
+  "update-config": {
+   "distretto": null,
+   "sprite": null,
+   "cosa_fa": null,
+   "oggetto": null,
+   "infra": [],
+   "notion": null,
+   "chiamate": 1,
+   "giorni": {
+    "2026-10-27": 1
+   },
+   "modi": {
+    "Caricata da Claude": 1
+   },
+   "ultimo": "2026-10-27",
+   "insieme": {
+    "trader-alerts": 1
+   }
+  }
+ },
+ "strade": [
+  [
+   "trader-alerts",
+   "trader-broker",
+   5
+  ],
+  [
+   "trader-backtest",
+   "trader-data",
+   4
+  ],
+  [
+   "trader-alerts",
+   "trader-data",
+   4
+  ],
+  [
+   "trader-entry",
+   "trader-news",
+   2
+  ],
+  [
+   "anthropic-skills:free-llm-apis",
+   "skill-scout",
+   1
+  ],
+  [
+   "anthropic-skills:docx",
+   "anthropic-skills:pptx",
+   1
+  ],
+  [
+   "trader-alerts",
+   "trader-backtest",
+   1
+  ],
+  [
+   "trader-alerts",
+   "trader-pro",
+   1
+  ],
+  [
+   "trader-backtest",
+   "trader-pro",
+   1
+  ],
+  [
+   "trader-data",
+   "trader-scanner",
+   1
+  ],
+  [
+   "trader-entry",
+   "trader-scanner",
+   1
+  ],
+  [
+   "trader-alerts",
+   "trader-entry",
+   1
+  ],
+  [
+   "trader-alerts",
+   "trader-exit",
+   1
+  ],
+  [
+   "trader-budget",
+   "trader-exit",
+   1
+  ],
+  [
+   "trader-budget",
+   "trader-risk",
+   1
+  ],
+  [
+   "trader-risk",
+   "trader-timemachine",
+   1
+  ],
+  [
+   "trader-broker",
+   "trader-timemachine",
+   1
+  ],
+  [
+   "trader-broker",
+   "trader-risk",
+   1
+  ],
+  [
+   "trader-alerts",
+   "trader-risk",
+   1
+  ],
+  [
+   "pixel-art-studio",
+   "skill-scout",
+   1
+  ],
+  [
+   "trader-alerts",
+   "update-config",
+   1
+  ]
+ ],
+ "giornate": {
+  "2026-10-18": {
+   "chiamate": 4,
+   "sessioni": 2,
+   "ordine": [
+    [
+     "anthropic-skills:free-llm-apis",
+     1
+    ],
+    [
+     "skill-scout",
+     1
+    ],
+    [
+     "anthropic-skills:pptx",
+     1
+    ],
+    [
+     "anthropic-skills:docx",
+     1
+    ]
+   ]
+  },
+  "2026-10-19": {
+   "chiamate": 1,
+   "sessioni": 1,
+   "ordine": [
+    [
+     "skill-scout",
+     1
+    ]
+   ]
+  },
+  "2026-10-21": {
+   "chiamate": 1,
+   "sessioni": 1,
+   "ordine": [
+    [
+     "workflow-authoring",
+     1
+    ]
+   ]
+  },
+  "2026-10-25": {
+   "chiamate": 3,
+   "sessioni": 3,
+   "ordine": [
+    [
+     "skill-scout",
+     3
+    ]
+   ]
+  },
+  "2026-10-26": {
+   "chiamate": 13,
+   "sessioni": 2,
+   "ordine": [
+    [
+     "skill-scout",
+     2
+    ],
+    [
+     "trader-data",
+     7
+    ],
+    [
+     "trader-backtest",
+     2
+    ],
+    [
+     "trader-alerts",
+     2
+    ]
+   ]
+  },
+  "2026-10-27": {
+   "chiamate": 33,
+   "sessioni": 5,
+   "ordine": [
+    [
+     "skill-scout",
+     1
+    ],
+    [
+     "pixel-art-studio",
+     1
+    ],
+    [
+     "update-config",
+     1
+    ],
+    [
+     "trader-alerts",
+     13
+    ],
+    [
+     "trader-data",
+     2
+    ],
+    [
+     "trader-pro",
+     1
+    ],
+    [
+     "trader-backtest",
+     1
+    ],
+    [
+     "trader-scanner",
+     1
+    ],
+    [
+     "trader-entry",
+     2
+    ],
+    [
+     "trader-news",
+     1
+    ],
+    [
+     "trader-exit",
+     1
+    ],
+    [
+     "trader-budget",
+     1
+    ],
+    [
+     "trader-risk",
+     2
+    ],
+    [
+     "trader-timemachine",
+     1
+    ],
+    [
+     "trader-broker",
+     4
+    ]
+   ]
+  }
+ }
+}

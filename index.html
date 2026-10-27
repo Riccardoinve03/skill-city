@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Skill City</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Silkscreen&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="stile.css">
+</head>
+<body>
+<div id="app">
+  <header class="barra">
+    <div class="logo"><canvas id="logo" width="48" height="48" aria-hidden="true"></canvas><span>Skill City</span></div>
+    <nav class="viste" aria-label="Viste">
+      <button type="button" data-vista="citta" aria-pressed="true">Città</button>
+      <button type="button" data-vista="registro" aria-pressed="false">Registro</button>
+    </nav>
+    <div class="numeri" id="numeri"></div>
+    <div class="aggiornato" id="aggiornato"></div>
+  </header>
+
+  <main class="corpo">
+    <section class="scena" id="scena">
+      <canvas id="schermo" aria-label="Mappa della Skill City"></canvas>
+      <div class="etichette" id="etichette"></div>
+      <div class="suggerimento" id="suggerimento" role="tooltip" hidden></div>
+
+      <div class="interruttori" role="group" aria-label="Livelli della mappa">
+        <button type="button" class="chip" data-livello="strade" aria-pressed="true"><i class="punto" style="--c:#ff9e6b"></i>Usate insieme</button>
+        <button type="button" class="chip" data-livello="infra" aria-pressed="true"><i class="punto" style="--c:#3fc8e4"></i>Infrastrutture</button>
+        <button type="button" class="chip" data-livello="nomi" aria-pressed="false">Nomi</button>
+      </div>
+
+      <div class="zoom" role="group" aria-label="Zoom">
+        <button type="button" id="zoom-piu" aria-label="Avvicina">+</button>
+        <button type="button" id="zoom-meno" aria-label="Allontana">−</button>
+        <button type="button" id="zoom-tutto" aria-label="Tutta la città" title="Tutta la città">⌂</button>
+      </div>
+
+      <canvas class="minimappa" id="minimappa" aria-hidden="true"></canvas>
+
+      <aside class="registro" id="registro" hidden aria-label="Registro degli usi"></aside>
+      <div class="feed" id="feed" aria-live="polite"></div>
+    </section>
+
+    <aside class="pannello" id="pannello" hidden aria-live="polite">
+      <button type="button" class="chiudi" id="chiudi" aria-label="Chiudi">×</button>
+      <div id="contenuto"></div>
+    </aside>
+  </main>
+
+  <footer class="replay" id="replay">
+    <button type="button" class="play" id="play" aria-label="Rivedi la giornata">▶</button>
+    <label class="giorno"><span>Giornata</span><select id="giorno"></select></label>
+    <div class="linea" id="linea" role="slider" aria-label="Momento della giornata" tabindex="0"><div class="tacche" id="tacche"></div><div class="testina" id="testina"></div></div>
+    <div class="orologio" id="orologio">--:--</div>
+    <div class="velocita" role="group" aria-label="Velocità">
+      <button type="button" data-v="1" aria-pressed="true">1×</button>
+      <button type="button" data-v="3" aria-pressed="false">3×</button>
+    </div>
+    <button type="button" class="esci" id="esci-replay" hidden>Torna a oggi</button>
+  </footer>
+</div>
+<script src="citta.js"></script>
+</body>
+</html>
