@@ -1016,9 +1016,7 @@ function daIndirizzo() {
     dimensiona();
     vaiA(e.x, e.y - 14, livelli().find(l => l >= 2) || 2, true);
   } else if (M.distretti[h]) {
-    seleziona({ tipo: "distretto", id: h });
-    dimensiona();
-    inquadraDistretto(h, true);
+    inquadraDistretto(h, true);        // solo l'inquadratura: negli embed stretti il pannello coprirebbe la mappa
   } else {
     if (h === "registro") vista("registro");
     tuttaLaCitta(true);
