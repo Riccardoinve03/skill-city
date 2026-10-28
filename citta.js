@@ -24,15 +24,16 @@ const INFRA = {
                desc: "L'anagrafe della città, cioè ~/.claude/skills: chi ha la chiave aggiunge, censisce o archivia le skill." },
   memoria:   { nome: "Memoria di Claude", colore: "#fff07a", edificio: null, titolo: "Memoria di Claude", segno: "post-it giallo in testa",
                desc: "Quello che Claude ricorda di te tra una conversazione e l'altra: l'indice MEMORY.md e i file dei ricordi." },
-  impostazioni: { nome: "Impostazioni", colore: "#c0c6d4", edificio: null, titolo: "Impostazioni di Claude Code", segno: "ingranaggio in testa",
+  impostazioni: { nome: "Impostazioni", colore: "#c0c6d4", edificio: "ufficio", titolo: "Ufficio dello sceriffo", segno: "ingranaggio in testa",
                desc: "I file settings.json: cosa Claude può fare senza chiedere (permessi) e cosa succede in automatico (hook)." },
 };
-const EDIFICIO_INFRA = { torre: "dati", banca: "broker", archivio: "edgar", biblioteca: "notion", palazzo: "skills" };
+const EDIFICIO_INFRA = { torre: "dati", banca: "broker", archivio: "edgar", biblioteca: "notion", palazzo: "skills", ufficio: "impostazioni" };
 const MODI = { "Comando /": "#ff9e6b", "Caricata da Claude": "#b49cff", "Script": "#3fc8e4" };
 const LIVELLI = [0.5, 1, 1.5, 2, 2.5, 3, 4];
-// cartellini da mettere sotto il quartiere: sotto l'angolo in basso, o sotto il lato sinistro
-// (l'Università, per non coprire il Municipio)
-const CARTELLINO = { finanza: "sotto", universita: "sinistra", municipio: "sotto" };
+// dove va il cartellino del quartiere (predefinito: sopra l'angolo in alto): sotto l'angolo in basso,
+// sotto il lato sinistro (l'Università, per non coprire il Municipio) o sopra l'angolo destro
+// (la Sicurezza, che in fondo ha l'Ufficio dello sceriffo)
+const CARTELLINO = { finanza: "sotto", universita: "sinistra", municipio: "sotto", sicurezza: "destra" };
 
 let M, D, SF, AT, ATS;              // mondo, dati, sfondo, atlante, atlante "addormentato"
 let OGGI, DURATA_ANIM;
@@ -511,9 +512,12 @@ function costruisciEtichette() {
         : `in costruzione · ${membri.length} prototipo`}</span></span>`;
     el.addEventListener("click", () => { seleziona({ tipo: "distretto", id: k }); inquadraDistretto(k); });
     // sotto il quartiere se in alto c'è qualcosa (la torre, la biblioteca, la piazza), altrimenti sopra
-    const p = d.poligono, dove = CARTELLINO[k], sotto = !!dove;
-    const q = dove === "sinistra" ? [p[2][0] + (p[3][0] - p[2][0]) / 3, p[2][1] + (p[3][1] - p[2][1]) / 3] : p[2];
-    etichetta(el, () => sotto ? [q[0], q[1] + 12] : [p[0][0], p[0][1] - 40], { sotto });
+    const p = d.poligono, dove = CARTELLINO[k], sotto = dove === "sotto" || dove === "sinistra";
+    const q = dove === "sotto" ? [p[2][0], p[2][1] + 12]
+      : dove === "sinistra" ? [p[2][0] + (p[3][0] - p[2][0]) / 3, p[2][1] + (p[3][1] - p[2][1]) / 3 + 12]
+      : dove === "destra" ? [p[1][0] + 20, p[1][1] - 40]
+      : [p[0][0], p[0][1] - 40];
+    etichetta(el, () => q, { sotto });
   }
   const pz = document.createElement("div");
   pz.className = "cartellino piazza";
