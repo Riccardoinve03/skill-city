@@ -1,8 +1,8 @@
 {
- "aggiornato": "2026-10-28T10:30+01:00",
+ "aggiornato": "2026-10-28T17:30+01:00",
  "dal": "2026-10-18",
- "totale": 65,
- "sessioni": 13,
+ "totale": 69,
+ "sessioni": 16,
  "skill": {
   "trader-alerts": {
    "distretto": "finanza",
@@ -14,18 +14,19 @@
     "pacchetto"
    ],
    "notion": "https://www.notion.so/406fcd1c89c68136a3a9e0f86cc35e89",
-   "chiamate": 15,
+   "chiamate": 18,
    "giorni": {
     "2026-10-26": 2,
-    "2026-10-27": 13
+    "2026-10-27": 13,
+    "2026-10-28": 3
    },
    "modi": {
-    "Script": 15
+    "Script": 18
    },
-   "ultimo": "2026-10-27",
+   "ultimo": "2026-10-28",
    "insieme": {
     "trader-backtest": 1,
-    "trader-data": 4,
+    "trader-data": 5,
     "trader-pro": 1,
     "trader-entry": 1,
     "trader-exit": 1,
@@ -134,18 +135,19 @@
     "pacchetto"
    ],
    "notion": "https://www.notion.so/406fcd1c89c68134acd6ef482a326a99",
-   "chiamate": 11,
+   "chiamate": 12,
    "giorni": {
     "2026-10-26": 7,
-    "2026-10-27": 4
+    "2026-10-27": 4,
+    "2026-10-28": 1
    },
    "modi": {
-    "Script": 11
+    "Script": 12
    },
-   "ultimo": "2026-10-27",
+   "ultimo": "2026-10-28",
    "insieme": {
     "trader-backtest": 4,
-    "trader-alerts": 4,
+    "trader-alerts": 5,
     "trader-scanner": 1,
     "trader-broker": 2
    }
@@ -694,6 +696,326 @@
    "ultimo": null,
    "insieme": {}
   },
+  "morning": {
+   "distretto": "impresa",
+   "ufficio": "Reception",
+   "sprite": "morning",
+   "cosa_fa": "Prepara il brief del mattino: legge calendario, posta e chat collegati e ti mostra in una pagina com'è la giornata.",
+   "oggetto": "Tazzina di caffè fumante: il vapore sale a riccioli",
+   "infra": [
+    "gmail"
+   ],
+   "notion": "https://www.notion.so/407fcd1c89c68176b623c6143abe8c8c",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "email-ops": {
+   "distretto": "impresa",
+   "ufficio": "Reception",
+   "sprite": "email-ops",
+   "cosa_fa": "Lavora sulla tua casella di posta: smista, prepara bozze e risposte e, quando invii, controlla nella Posta inviata che la mail sia partita.",
+   "oggetto": "Cassetta della posta: dopo l'invio alza la bandierina rossa",
+   "infra": [
+    "gmail"
+   ],
+   "notion": "https://www.notion.so/407fcd1c89c6814c9fe5e1e456cd0b44",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "docx": {
+   "distretto": "impresa",
+   "ufficio": "Documenti",
+   "sprite": "docx",
+   "cosa_fa": "Crea, legge e modifica documenti Word (.docx): titoli, tabelle, immagini, revisioni e commenti.",
+   "oggetto": "Foglio Word: sotto la fascia blu le righe si scrivono una alla volta",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c681709e58e7e8e4b404e6",
+   "chiamate": 1,
+   "giorni": {
+    "2026-10-18": 1
+   },
+   "modi": {
+    "Caricata da Claude": 1
+   },
+   "ultimo": "2026-10-18",
+   "insieme": {
+    "pptx": 1
+   }
+  },
+  "pdf": {
+   "distretto": "impresa",
+   "ufficio": "Documenti",
+   "sprite": "pdf",
+   "cosa_fa": "Fa tutto con i PDF: estrae testo e tabelle, unisce e divide, ruota, compila moduli e ne crea di nuovi.",
+   "oggetto": "Pinzatrice rossa: unisce i fogli del PDF con un clic",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c68152bf6bfe1afd62bdff",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "pptx": {
+   "distretto": "impresa",
+   "ufficio": "Documenti",
+   "sprite": "pptx",
+   "cosa_fa": "Crea, legge e modifica presentazioni PowerPoint (.pptx): slide nuove o da un modello, note e commenti.",
+   "oggetto": "Diapositiva alzata: a ogni clic cambia slide",
+   "infra": [
+    "pptx"
+   ],
+   "notion": "https://www.notion.so/407fcd1c89c681cb8286efb1997dcd3d",
+   "chiamate": 1,
+   "giorni": {
+    "2026-10-18": 1
+   },
+   "modi": {
+    "Caricata da Claude": 1
+   },
+   "ultimo": "2026-10-18",
+   "insieme": {
+    "docx": 1
+   }
+  },
+  "xlsx": {
+   "distretto": "impresa",
+   "ufficio": "Documenti",
+   "sprite": "xlsx",
+   "cosa_fa": "Crea, legge e sistema fogli di calcolo (.xlsx, .csv): formule, formattazione, grafici e pulizia dei dati.",
+   "oggetto": "Foglio Excel: le celle si riempiono una alla volta, poi compare il totale",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c68141b48cf4b05a6be87b",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "docs": {
+   "distretto": "impresa",
+   "ufficio": "Documenti",
+   "sprite": "docs",
+   "cosa_fa": "Scrive documenti da condividere e commentare (report, proposte, lettere, guide) come documenti di Claude Docs.",
+   "oggetto": "Documento condiviso con una riga evidenziata e il fumetto del commento",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c68157a570f927abcdd29d",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "lead-intelligence": {
+   "distretto": "impresa",
+   "ufficio": "Commerciale",
+   "sprite": "lead-intelligence",
+   "cosa_fa": "Trova e qualifica potenziali clienti e contatti e prepara messaggi su misura per email, LinkedIn e X, che non manda da sola.",
+   "oggetto": "Binocolo: quando trova il contatto giusto gli si accende la stellina",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c681bb96d2daea5356d101",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "customer-billing-ops": {
+   "distretto": "impresa",
+   "ufficio": "Commerciale",
+   "sprite": "customer-billing-ops",
+   "cosa_fa": "Gestisce i pagamenti dei clienti: abbonamenti, rimborsi, rinnovi falliti e analisi dei piani, con lo strumento di pagamento collegato.",
+   "oggetto": "Registratore di cassa: batte lo scontrino e il cassetto si apre",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c681d0aca2e45e38d259ab",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "brand-discovery": {
+   "distretto": "impresa",
+   "ufficio": "Marketing",
+   "sprite": "brand-discovery",
+   "cosa_fa": "Ti intervista, una domanda alla volta, per costruire l'identità del tuo marchio e alla fine scrive il brandbook.",
+   "oggetto": "Specchio: nel riflesso compare la stellina dell'identità",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c681248f11da919b528664",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "crosspost": {
+   "distretto": "impresa",
+   "ufficio": "Marketing",
+   "sprite": "crosspost",
+   "cosa_fa": "Adatta lo stesso contenuto a X, LinkedIn, Threads e Bluesky, con una versione diversa per ogni piattaforma.",
+   "oggetto": "Megafono: lo stesso annuncio parte verso quattro social",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c6812cbe5ef6f72ad09f80",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "product-lens": {
+   "distretto": "impresa",
+   "ufficio": "Prodotto",
+   "sprite": "product-lens",
+   "cosa_fa": "Prima di costruire verifica il perché: diagnosi del prodotto, segnali di product-market fit e una raccomandazione go/no-go.",
+   "oggetto": "Bussola: l'ago oscilla e poi trova il nord",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c6817ca550cd8abfb43dcc",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "spec-to-implementation": {
+   "distretto": "impresa",
+   "ufficio": "Prodotto",
+   "sprite": "spec-to-implementation",
+   "cosa_fa": "Trasforma una specifica di prodotto scritta in Notion in compiti con criteri di accettazione e avanzamento.",
+   "oggetto": "Lavagnetta kanban: il compito passa da «da fare» a «fatto»",
+   "infra": [
+    "notion"
+   ],
+   "notion": "https://www.notion.so/407fcd1c89c68155bb08fd97cedb07e0",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "stakeholder-update": {
+   "distretto": "impresa",
+   "ufficio": "Prodotto",
+   "sprite": "stakeholder-update",
+   "cosa_fa": "Scrive l'aggiornamento per chi segue il progetto, adattato al pubblico, con lo stato in verde, giallo o rosso.",
+   "oggetto": "Semaforo dello stato: rosso, giallo, poi verde fisso",
+   "infra": [
+    "plaud"
+   ],
+   "notion": "https://www.notion.so/407fcd1c89c6817d9794ce8032e90ae0",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "synthesize-research": {
+   "distretto": "impresa",
+   "ufficio": "Prodotto",
+   "sprite": "synthesize-research",
+   "cosa_fa": "Mette insieme interviste, sondaggi e feedback e ne tira fuori temi, intuizioni e priorità.",
+   "oggetto": "Fumetti delle interviste che si fondono in un'unica intuizione",
+   "infra": [
+    "plaud"
+   ],
+   "notion": "https://www.notion.so/407fcd1c89c6819f8d44e1713a587f8d",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "investor-materials": {
+   "distretto": "impresa",
+   "ufficio": "Investitori",
+   "sprite": "investor-materials",
+   "cosa_fa": "Prepara i materiali per chi investe: pitch deck, one-pager, memo e modelli finanziari, con numeri coerenti.",
+   "oggetto": "Il razzo della crescita: si accende e si alza dalla rampa",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c68137b08dcc164e6482d2",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "investor-outreach": {
+   "distretto": "impresa",
+   "ufficio": "Investitori",
+   "sprite": "investor-outreach",
+   "cosa_fa": "Scrive le comunicazioni con gli investitori: email a freddo, presentazioni, follow-up e aggiornamenti.",
+   "oggetto": "Aeroplanino di carta: la mail parte e ne è già pronto un altro",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c6815183a1cccd15be692f",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "master-agreement-generator": {
+   "distretto": "impresa",
+   "ufficio": "Legale",
+   "sprite": "master-agreement-generator",
+   "cosa_fa": "Genera bozze di contratti quadro da un unico modello, con le clausole scelte in base al ruolo; escono sempre come BOZZA.",
+   "oggetto": "Contratto arrotolato con il nastro rosso e il sigillo di ceralacca",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c681da98b1c97d00ffd8b4",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "esign-field-placement": {
+   "distretto": "impresa",
+   "ufficio": "Legale",
+   "sprite": "esign-field-placement",
+   "cosa_fa": "Posiziona firma, data e campi di testo in una busta di firma elettronica nel browser e la salva come bozza.",
+   "oggetto": "Penna che firma sulla linea tratteggiata accanto alla X",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c6816f81e8c96844ddbad6",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "council": {
+   "distretto": "impresa",
+   "ufficio": "Direzione",
+   "sprite": "council",
+   "cosa_fa": "Riunisce un consiglio di quattro voci per le decisioni incerte e alla fine propone una scelta motivata.",
+   "oggetto": "Bilancia: i piatti oscillano e trovano l'equilibrio",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c68193a71cdb668236695f",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "meeting-intelligence": {
+   "distretto": "impresa",
+   "ufficio": "Direzione",
+   "sprite": "meeting-intelligence",
+   "cosa_fa": "Prepara le riunioni: raccoglie il contesto da Notion, lo arricchisce e salva in Notion preparazione e ordine del giorno.",
+   "oggetto": "Calendario a strappo: compare il giorno della riunione cerchiato",
+   "infra": [
+    "notion"
+   ],
+   "notion": "https://www.notion.so/407fcd1c89c68197833dcb56a5753afb",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
   "anthropic-skills:free-llm-apis": {
    "distretto": null,
    "sprite": null,
@@ -711,44 +1033,6 @@
    "ultimo": "2026-10-18",
    "insieme": {
     "skill-scout": 1
-   }
-  },
-  "anthropic-skills:pptx": {
-   "distretto": null,
-   "sprite": null,
-   "cosa_fa": null,
-   "oggetto": null,
-   "infra": [],
-   "notion": null,
-   "chiamate": 1,
-   "giorni": {
-    "2026-10-18": 1
-   },
-   "modi": {
-    "Caricata da Claude": 1
-   },
-   "ultimo": "2026-10-18",
-   "insieme": {
-    "anthropic-skills:docx": 1
-   }
-  },
-  "anthropic-skills:docx": {
-   "distretto": null,
-   "sprite": null,
-   "cosa_fa": null,
-   "oggetto": null,
-   "infra": [],
-   "notion": null,
-   "chiamate": 1,
-   "giorni": {
-    "2026-10-18": 1
-   },
-   "modi": {
-    "Caricata da Claude": 1
-   },
-   "ultimo": "2026-10-18",
-   "insieme": {
-    "anthropic-skills:pptx": 1
    }
   },
   "workflow-authoring": {
@@ -791,16 +1075,16 @@
  "strade": [
   [
    "trader-alerts",
+   "trader-data",
+   5
+  ],
+  [
+   "trader-alerts",
    "trader-broker",
    5
   ],
   [
    "trader-backtest",
-   "trader-data",
-   4
-  ],
-  [
-   "trader-alerts",
    "trader-data",
    4
   ],
@@ -820,8 +1104,8 @@
    1
   ],
   [
-   "anthropic-skills:docx",
-   "anthropic-skills:pptx",
+   "docx",
+   "pptx",
    1
   ],
   [
@@ -924,11 +1208,11 @@
      1
     ],
     [
-     "anthropic-skills:pptx",
+     "pptx",
      1
     ],
     [
-     "anthropic-skills:docx",
+     "docx",
      1
     ]
    ]
@@ -1051,6 +1335,20 @@
     ],
     [
      "trader-journal",
+     1
+    ]
+   ]
+  },
+  "2026-10-28": {
+   "chiamate": 4,
+   "sessioni": 3,
+   "ordine": [
+    [
+     "trader-alerts",
+     3
+    ],
+    [
+     "trader-data",
      1
     ]
    ]

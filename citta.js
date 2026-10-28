@@ -26,14 +26,22 @@ const INFRA = {
                desc: "Quello che Claude ricorda di te tra una conversazione e l'altra: l'indice MEMORY.md e i file dei ricordi." },
   impostazioni: { nome: "Impostazioni", colore: "#c0c6d4", edificio: "ufficio", titolo: "Ufficio dello sceriffo", segno: "ingranaggio in testa",
                desc: "I file settings.json: cosa Claude può fare senza chiedere (permessi) e cosa succede in automatico (hook)." },
+  gmail:     { nome: "Connettore Gmail", colore: "#e8584c", edificio: "posta", titolo: "Ufficio postale", segno: "busta con la M rossa in mano",
+               desc: "La tua casella Gmail: le skill con la busta leggono, smistano e preparano la posta. L'invio parte solo se lo chiedi." },
+  plaud:     { nome: "Connettore Plaud", colore: "#ffb38a", edificio: "plaud", titolo: "Studio di registrazione", segno: "capsula del NotePin in testa",
+               desc: "Il registratore Plaud: le skill con la capsula usano le trascrizioni delle riunioni. Lo studio sta tra Università e Impresa perché serve a lezioni e riunioni." },
 };
-const EDIFICIO_INFRA = { torre: "dati", banca: "broker", archivio: "edgar", biblioteca: "notion", palazzo: "skills", ufficio: "impostazioni" };
+const EDIFICIO_INFRA = { torre: "dati", banca: "broker", archivio: "edgar", biblioteca: "notion", palazzo: "skills", ufficio: "impostazioni",
+                         posta: "gmail", plaud: "plaud" };
+// Impresa: un colore per ufficio, lo stesso del cordino dei mostriciattoli e del piano nella torre (disegno/mostri.py)
+const UFFICI = { Reception: "#2fb3a0", Documenti: "#3b7dd8", Commerciale: "#8a6fd1", Marketing: "#e0679a",
+                 Prodotto: "#9bd04a", Investitori: "#f2c14e", Legale: "#8e3a59", Direzione: "#f1ead8" };
 const MODI = { "Comando /": "#ff9e6b", "Caricata da Claude": "#b49cff", "Script": "#3fc8e4" };
 const LIVELLI = [0.5, 1, 1.5, 2, 2.5, 3, 4];
-// dove va il cartellino del quartiere (predefinito: sopra l'angolo in alto): sotto l'angolo in basso,
-// sotto il lato sinistro (l'Università, per non coprire il Municipio) o sopra l'angolo destro
-// (la Sicurezza, che in fondo ha l'Ufficio dello sceriffo)
-const CARTELLINO = { finanza: "sotto", universita: "sinistra", municipio: "sotto", sicurezza: "destra" };
+// dove va il cartellino del quartiere: di norma oltre l'angolo più esterno, sul lato rivolto fuori dalla città
+// (sopra se il quartiere sta in alto, sotto se sta in basso), così vale con qualunque numero di quartieri.
+// "destra" = sopra l'angolo destro: per l'Impresa, che in fondo ha la torre degli uffici
+const CARTELLINO = { impresa: "destra" };
 
 let M, D, SF, AT, ATS;              // mondo, dati, sfondo, atlante, atlante "addormentato"
 let OGGI, DURATA_ANIM;
@@ -392,6 +400,8 @@ function disegnaMondo(t) {
     const lx = o.pos[0] - sp.ancora[0] + sp.luce[0], ly = o.pos[1] - sp.ancora[1] + sp.luce[1];
     if (o.tipo === "torre") {
       if (t % 1200 < 600) { ellissePiena(lx, ly, 4, 3, "rgba(63,200,228,.35)"); w.fillStyle = "#bff4ff"; w.fillRect(lx - 1, ly, 3, 1); }
+    } else if (o.tipo === "plaud") {
+      if (t % 1600 < 900) ellissePiena(lx, ly + 1, 6, 3, "rgba(232,70,60,.35)");      // ON AIR: sta registrando
     } else {
       ellissePiena(lx, ly + 1, 4, 3, "rgba(255,210,122,.16)");
     }
@@ -498,6 +508,16 @@ function ciclo(t) {
 const etichette = [];
 function etichetta(el, mondoXY, opz = {}) { $("#etichette").appendChild(el); etichette.push({ el, mondoXY, ...opz }); return el; }
 
+function posizioneCartellino(k, d) {
+  const p = d.poligono;
+  if (CARTELLINO[k] === "destra") return { q: [p[1][0] + 70, p[1][1] - 8], sotto: false };
+  const [cx, cy] = M.piazza.centro, dx = d.centro[0] - cx, dy = d.centro[1] - cy, L = Math.hypot(dx, dy) || 1;
+  const ux = dx / L, uy = dy / L, fuori = v => (v[0] - cx) * ux + (v[1] - cy) * uy;
+  const v = p.reduce((a, b) => fuori(b) > fuori(a) ? b : a);           // l'angolo più lontano dalla piazza
+  const sotto = uy > .3, fianco = Math.sign(ux) * Math.max(0, Math.abs(ux) - .3) * 100;   // i laterali escono di lato
+  return { q: [v[0] + ux * 14 + fianco, v[1] + uy * 14 + (sotto ? 4 : -6)], sotto };
+}
+
 function costruisciEtichette() {
   for (const [k, d] of Object.entries(M.distretti)) {
     const el = document.createElement("div");
@@ -511,12 +531,7 @@ function costruisciEtichette() {
         ? `${membri.length} skill · <span class="on">${oggi} attive oggi</span> · ${chiamate} chiamate`
         : `in costruzione · ${membri.length} prototipo`}</span></span>`;
     el.addEventListener("click", () => { seleziona({ tipo: "distretto", id: k }); inquadraDistretto(k); });
-    // sotto il quartiere se in alto c'è qualcosa (la torre, la biblioteca, la piazza), altrimenti sopra
-    const p = d.poligono, dove = CARTELLINO[k], sotto = dove === "sotto" || dove === "sinistra";
-    const q = dove === "sotto" ? [p[2][0], p[2][1] + 12]
-      : dove === "sinistra" ? [p[2][0] + (p[3][0] - p[2][0]) / 3, p[2][1] + (p[3][1] - p[2][1]) / 3 + 12]
-      : dove === "destra" ? [p[1][0] + 20, p[1][1] - 40]
-      : [p[0][0], p[0][1] - 40];
+    const { q, sotto } = posizioneCartellino(k, d);
     etichetta(el, () => q, { sotto });
   }
   const pz = document.createElement("div");
@@ -798,6 +813,7 @@ function schedaSkill(nome) {
       <div><h2>${esc(nome)}</h2>${etichettaDistretto(s.distretto)}<br><span class="stato ${st}">${statoTesto}</span></div></div>
     ${s.cosa_fa ? `<p>${esc(s.cosa_fa)}</p>` : `<p>Questa skill non ha ancora una scheda: arriverà quando costruiremo il suo quartiere.</p>`}
     ${s.oggetto ? `<div class="oggetto">In mano: ${esc(s.oggetto)}</div>` : ""}
+    ${s.ufficio ? `<div class="oggetto">Ufficio: <span class="etichetta-d"><i style="--c:${UFFICI[s.ufficio] || "#646a87"}"></i>${esc(s.ufficio)}</span></div>` : ""}
     <div class="cifre"><div><b>${s.chiamate}</b><span>chiamate</span></div><div><b>${giorniAttivi}</b><span>giorni d'uso</span></div>
       <div><b>${esc(quando(s.ultimo))}</b><span>ultimo uso</span></div></div>
     <h3>Ultime due settimane</h3>${barreGiorni(s.giorni)}
@@ -840,9 +856,19 @@ function schedaDistretto(k) {
     ${d.aperto ? "" : `<p>Per ora qui c'è solo il prototipo del mostriciattolo. Il quartiere aprirà quando faremo le schede delle sue skill.</p>`}
     <div class="cifre"><div><b>${membri.length}</b><span>skill</span></div><div><b>${tot}</b><span>chiamate</span></div>
       <div><b>${dormono.length}</b><span>dormono</span></div></div>
-    <h3>Le skill, dalla più usata</h3>
+    ${membri.some(a => a.s.ufficio) ? schedaUffici(membri, max) : `<h3>Le skill, dalla più usata</h3>
     <div class="lista">${membri.map(a => `<button type="button" class="riga" data-skill="${esc(a.nome)}"><span>${esc(a.nome)}</span>
-      <span class="n">${a.s.chiamate || "—"}</span></button><div class="barretta" style="width:${100 * a.s.chiamate / max}%"></div>`).join("")}</div>`;
+      <span class="n">${a.s.chiamate || "—"}</span></button><div class="barretta" style="width:${100 * a.s.chiamate / max}%"></div>`).join("")}</div>`}`;
+}
+
+// Impresa: le skill divise per ufficio, dalla Reception (piano terra) alla Direzione (ultimo piano)
+function schedaUffici(membri, max) {
+  return Object.entries(UFFICI).map(([u, c]) => {
+    const qui = membri.filter(a => a.s.ufficio === u); if (!qui.length) return "";
+    return `<h3><span class="etichetta-d"><i style="--c:${c}"></i>${esc(u)}</span></h3>
+      <div class="lista">${qui.map(a => `<button type="button" class="riga" data-skill="${esc(a.nome)}"><span>${esc(a.nome)}</span>
+      <span class="n">${a.s.chiamate || "—"}</span></button><div class="barretta" style="width:${100 * a.s.chiamate / max}%;background:${c}"></div>`).join("")}</div>`;
+  }).join("");
 }
 
 function schedaClaude() {
