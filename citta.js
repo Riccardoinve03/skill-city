@@ -30,9 +30,11 @@ const INFRA = {
                desc: "La tua casella Gmail: le skill con la busta leggono, smistano e preparano la posta. L'invio parte solo se lo chiedi." },
   plaud:     { nome: "Connettore Plaud", colore: "#ffb38a", edificio: "plaud", titolo: "Studio di registrazione", segno: "capsula del NotePin in testa",
                desc: "Il registratore Plaud: le skill con la capsula usano le trascrizioni delle riunioni. Lo studio sta tra Università e Impresa perché serve a lezioni e riunioni." },
+  canva:     { nome: "Connettore Canva", colore: "#00c4cc", edificio: "studio", titolo: "Studio Canva", segno: "bollino turchese e viola sul fianco",
+               desc: "I tuoi design Canva: le skill col bollino li cercano, li leggono, li modificano e li ridimensionano per i social." },
 };
 const EDIFICIO_INFRA = { torre: "dati", banca: "broker", archivio: "edgar", biblioteca: "notion", palazzo: "skills", ufficio: "impostazioni",
-                         posta: "gmail", plaud: "plaud" };
+                         posta: "gmail", plaud: "plaud", studio: "canva" };
 // Impresa: un colore per ufficio, lo stesso del cordino dei mostriciattoli e del piano nella torre (disegno/mostri.py)
 const UFFICI = { Reception: "#2fb3a0", Documenti: "#3b7dd8", Commerciale: "#8a6fd1", Marketing: "#e0679a",
                  Prodotto: "#9bd04a", Investitori: "#f2c14e", Legale: "#8e3a59", Direzione: "#f1ead8" };

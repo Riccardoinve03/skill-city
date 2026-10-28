@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-28T17:30+01:00",
+ "aggiornato": "2026-10-28T18:06+01:00",
  "dal": "2026-10-18",
  "totale": 69,
  "sessioni": 16,
@@ -1016,6 +1016,234 @@
    "ultimo": null,
    "insieme": {}
   },
+  "pixel-art-studio": {
+   "distretto": "atelier",
+   "sprite": "pixel-art-studio",
+   "cosa_fa": "Disegna pixel art pixel per pixel con Python: sprite, personaggi e animazioni in GIF. È la skill che ha disegnato Skill City.",
+   "oggetto": "Cavalletto: il pennello dipinge un mini mostriciattolo, una riga alla volta",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c6816b853fc110116d29fa",
+   "chiamate": 1,
+   "giorni": {
+    "2026-10-27": 1
+   },
+   "modi": {
+    "Caricata da Claude": 1
+   },
+   "ultimo": "2026-10-27",
+   "insieme": {
+    "skill-scout": 1
+   }
+  },
+  "avvia-trasferimento": {
+   "distretto": "atelier",
+   "sprite": "avvia-trasferimento",
+   "cosa_fa": "Copia le foto nuove dalla scheda SD della fotocamera all'SSD esterno e le smista nelle cartelle per evento.",
+   "oggetto": "Fotocamera col flash: la scheda SD vola nel disco",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c6810e90ceca1a42b31255",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "frontend-design": {
+   "distretto": "atelier",
+   "sprite": "frontend-design",
+   "cosa_fa": "Dà una direzione visiva precisa quando costruisci o rifai un'interfaccia, per evitare l'aspetto generico.",
+   "oggetto": "Mazzetta dei colori che si apre a ventaglio",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c6819a8576de3e090b7701",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "make-interfaces-feel-better": {
+   "distretto": "atelier",
+   "sprite": "make-interfaces-feel-better",
+   "cosa_fa": "Applica i dettagli che rendono curata un'interfaccia: spaziature, tipografia, ombre, movimento e stati.",
+   "oggetto": "Panno che lucida un pulsante finché brilla",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c68110b7a4eb2170d51c16",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "motion-patterns": {
+   "distretto": "atelier",
+   "sprite": "motion-patterns",
+   "cosa_fa": "Animazioni pronte per React e Next.js: pulsanti, finestre, notifiche, transizioni e scroll.",
+   "oggetto": "Flipbook: sfogliandolo, la pallina rimbalza",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c681409b35e76e54e27b06",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "web-artifacts-builder": {
+   "distretto": "atelier",
+   "sprite": "web-artifacts-builder",
+   "cosa_fa": "Costruisce artifact HTML complessi per claude.ai con React, Tailwind e shadcn/ui.",
+   "oggetto": "Mattoncini dei componenti che si impilano",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c68139b10dd4c6296bcfd5",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "playground": {
+   "distretto": "atelier",
+   "sprite": "playground",
+   "cosa_fa": "Crea playground HTML interattivi con controlli e anteprima dal vivo, per esplorare un'idea a vista.",
+   "oggetto": "Mixer con tre cursori: cambia il colore dell'anteprima",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c681a9a747c47a7ae5a9c7",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "frontend-slides": {
+   "distretto": "atelier",
+   "sprite": "frontend-slides",
+   "cosa_fa": "Crea presentazioni HTML animate da zero o convertendo un PowerPoint.",
+   "oggetto": "Proiettore: il fascio porta le slide sullo schermo",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c681afaddcebd51beb331d",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "ios-icon-gen": {
+   "distretto": "atelier",
+   "sprite": "ios-icon-gen",
+   "cosa_fa": "Genera le icone per le app iOS da SF Symbols o dalle icone di Iconify.",
+   "oggetto": "Telefono che si riempie di icone",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c68137971ccc44b1ac441d",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "brand-check": {
+   "distretto": "atelier",
+   "sprite": "brand-check",
+   "cosa_fa": "Confronta un design Canva con il tuo brand kit e segnala colori, font e loghi fuori posto.",
+   "oggetto": "Contagocce sui colori: spunte e una croce",
+   "infra": [
+    "canva"
+   ],
+   "notion": "https://www.notion.so/407fcd1c89c68136b99cf45a14347f8d",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "bulk-create": {
+   "distretto": "atelier",
+   "sprite": "bulk-create",
+   "cosa_fa": "Crea tanti design Canva in una volta da una tabella di dati e un modello del brand.",
+   "oggetto": "La pila di cartoline che si moltiplica",
+   "infra": [
+    "canva"
+   ],
+   "notion": "https://www.notion.so/407fcd1c89c681978574d7954ddb61d3",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "cli": {
+   "distretto": "atelier",
+   "sprite": "cli",
+   "cosa_fa": "Usa la Canva CLI dal terminale per lavorare con le API di Canva.",
+   "oggetto": "Il terminalino della Canva CLI",
+   "infra": [
+    "canva"
+   ],
+   "notion": "https://www.notion.so/407fcd1c89c681cc9d8bf914659a2746",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "edit-design": {
+   "distretto": "atelier",
+   "sprite": "edit-design",
+   "cosa_fa": "Modifica un design Canva esistente: testi, immagini, video ed elementi.",
+   "oggetto": "Matita con la gomma: scrive la riga nuova, cancella la vecchia",
+   "infra": [
+    "canva"
+   ],
+   "notion": "https://www.notion.so/407fcd1c89c681a5a1b1c4d3e07dc588",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "get-design-feedback": {
+   "distretto": "atelier",
+   "sprite": "get-design-feedback",
+   "cosa_fa": "Legge un design Canva e dà un parere strutturato su gerarchia, testi e leggibilità.",
+   "oggetto": "Fumetto con tre stelline che si accendono",
+   "infra": [
+    "canva"
+   ],
+   "notion": "https://www.notion.so/407fcd1c89c6818b9345fef3a6811fbd",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "implement-feedback": {
+   "distretto": "atelier",
+   "sprite": "implement-feedback",
+   "cosa_fa": "Legge i commenti dei revisori su un design Canva e applica le modifiche.",
+   "oggetto": "Le puntine dei commenti diventano spunte",
+   "infra": [
+    "canva"
+   ],
+   "notion": "https://www.notion.so/407fcd1c89c681ca97a2fc89f0655d8f",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "resize-for-social-media": {
+   "distretto": "atelier",
+   "sprite": "resize-for-social-media",
+   "cosa_fa": "Adatta un design Canva ai formati dei social in un colpo solo.",
+   "oggetto": "Cornice che passa da quadrata a verticale a orizzontale",
+   "infra": [
+    "canva"
+   ],
+   "notion": "https://www.notion.so/407fcd1c89c6811e8b81cb5547551e5b",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
   "anthropic-skills:free-llm-apis": {
    "distretto": null,
    "sprite": null,
@@ -1051,25 +1279,6 @@
    },
    "ultimo": "2026-10-21",
    "insieme": {}
-  },
-  "pixel-art-studio": {
-   "distretto": null,
-   "sprite": null,
-   "cosa_fa": null,
-   "oggetto": null,
-   "infra": [],
-   "notion": null,
-   "chiamate": 1,
-   "giorni": {
-    "2026-10-27": 1
-   },
-   "modi": {
-    "Caricata da Claude": 1
-   },
-   "ultimo": "2026-10-27",
-   "insieme": {
-    "skill-scout": 1
-   }
   }
  },
  "strade": [
