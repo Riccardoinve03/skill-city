@@ -20,8 +20,14 @@ const INFRA = {
                desc: "Il connettore Notion: le skill con la toppa cercano nelle tue pagine e ci salvano report, wiki e decisioni." },
   pptx:      { nome: "Skill pptx", colore: "#d24726", edificio: null, titolo: "Skill pptx", segno: "mini diapositiva arancio",
                desc: "Il file .pptx lo crea la skill pptx di Anthropic: academic-pptx decide contenuto e struttura delle slide." },
+  skills:    { nome: "Cartella delle skill", colore: "#d9a55b", edificio: "palazzo", titolo: "Palazzo comunale", segno: "chiave d'oro sul petto",
+               desc: "L'anagrafe della città, cioè ~/.claude/skills: chi ha la chiave aggiunge, censisce o archivia le skill." },
+  memoria:   { nome: "Memoria di Claude", colore: "#fff07a", edificio: null, titolo: "Memoria di Claude", segno: "post-it giallo in testa",
+               desc: "Quello che Claude ricorda di te tra una conversazione e l'altra: l'indice MEMORY.md e i file dei ricordi." },
+  impostazioni: { nome: "Impostazioni", colore: "#c0c6d4", edificio: null, titolo: "Impostazioni di Claude Code", segno: "ingranaggio in testa",
+               desc: "I file settings.json: cosa Claude può fare senza chiedere (permessi) e cosa succede in automatico (hook)." },
 };
-const EDIFICIO_INFRA = { torre: "dati", banca: "broker", archivio: "edgar", biblioteca: "notion" };
+const EDIFICIO_INFRA = { torre: "dati", banca: "broker", archivio: "edgar", biblioteca: "notion", palazzo: "skills" };
 const MODI = { "Comando /": "#ff9e6b", "Caricata da Claude": "#b49cff", "Script": "#3fc8e4" };
 const LIVELLI = [0.5, 1, 1.5, 2, 2.5, 3, 4];
 // cartellini da mettere sotto il quartiere: sotto l'angolo in basso, o sotto il lato sinistro

@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-28T08:55+01:00",
+ "aggiornato": "2026-10-28T10:10+01:00",
  "dal": "2026-10-18",
  "totale": 65,
  "sessioni": 13,
@@ -381,10 +381,13 @@
   "skill-stocktake": {
    "distretto": "municipio",
    "sprite": "skill-stocktake",
-   "infra": [],
-   "notion": null,
-   "oggetto": "Fascia tricolore e cilindro",
-   "cosa_fa": "Fa l'inventario delle skill e dei comandi installati e ne valuta la qualità, una per una.",
+   "cosa_fa": "Fa il censimento delle skill e dei comandi installati e ne valuta la qualità una per una, anche rispetto a MEMORY.md e CLAUDE.md.",
+   "oggetto": "Cartellina con l'elenco: spunta le skill una alla volta",
+   "infra": [
+    "skills",
+    "memoria"
+   ],
+   "notion": "https://www.notion.so/407fcd1c89c681e691d1ffaf14be501c",
    "chiamate": 0,
    "giorni": {},
    "modi": {},
@@ -488,6 +491,155 @@
    "ultimo": null,
    "insieme": {}
   },
+  "skill-scout": {
+   "distretto": "municipio",
+   "sprite": "skill-scout",
+   "cosa_fa": "Trova skill e plugin per un bisogno, ne controlla la sicurezza leggendo i file e propone solo quelli che passano; l'installazione resta tua.",
+   "oggetto": "Timbro sul passaporto: lascia il bollino verde del verdetto",
+   "infra": [
+    "skills"
+   ],
+   "notion": "https://www.notion.so/407fcd1c89c6811b8f40cf1229d939b4",
+   "chiamate": 8,
+   "giorni": {
+    "2026-10-18": 1,
+    "2026-10-19": 1,
+    "2026-10-25": 3,
+    "2026-10-26": 2,
+    "2026-10-27": 1
+   },
+   "modi": {
+    "Caricata da Claude": 7,
+    "Comando /": 1
+   },
+   "ultimo": "2026-10-27",
+   "insieme": {
+    "anthropic-skills:free-llm-apis": 1,
+    "pixel-art-studio": 1
+   }
+  },
+  "skill-creator": {
+   "distretto": "municipio",
+   "sprite": "skill-creator",
+   "cosa_fa": "Crea skill nuove, migliora quelle esistenti e ne misura le prestazioni con test e confronti.",
+   "oggetto": "Uovo che si schiude: ne esce un mini-mostriciattolo",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c681d29cbffc92cee103f7",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "config-gc": {
+   "distretto": "municipio",
+   "sprite": "config-gc",
+   "cosa_fa": "Fa pulizia nella configurazione di Claude Code (skill, memoria, hook, permessi, server MCP): propone cosa togliere e lo sposta nel cestino, una voce alla volta.",
+   "oggetto": "Bidone: ci butta un foglio vecchio e il coperchio si richiude",
+   "infra": [
+    "skills",
+    "memoria",
+    "impostazioni"
+   ],
+   "notion": "https://www.notion.so/407fcd1c89c68170ae63d4b3637ae9fb",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "context-budget": {
+   "distretto": "municipio",
+   "sprite": "context-budget",
+   "cosa_fa": "Dice quanto contesto resta nella conversazione usando il contatore di Claude Code; solo se glielo chiedi stima quanto pesano le cose installate.",
+   "oggetto": "Contatore a lancetta: sale dal verde verso il giallo",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c6810b980feb83b401499b",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "consolidate-memory": {
+   "distretto": "municipio",
+   "sprite": "consolidate-memory",
+   "cosa_fa": "Riordina la memoria di Claude: unisce i doppioni, corregge i fatti superati e tiene corto l'indice.",
+   "oggetto": "Schede dei ricordi: da sparse tornano in una pila ordinata",
+   "infra": [
+    "memoria"
+   ],
+   "notion": "https://www.notion.so/407fcd1c89c68158b407d4b3670415d7",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "import-memory": {
+   "distretto": "municipio",
+   "sprite": "import-memory",
+   "cosa_fa": "Porta nella memoria di Claude i ricordi esportati da un altro assistente (ChatGPT, Gemini…), solo aggiungendo e dopo il tuo ok.",
+   "oggetto": "Scatolone del trasloco: ne esce un ricordo, un post-it",
+   "infra": [
+    "memoria"
+   ],
+   "notion": "https://www.notion.so/407fcd1c89c681aba08ec90a8d2d0e16",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "update-config": {
+   "distretto": "municipio",
+   "sprite": "update-config",
+   "cosa_fa": "Modifica le impostazioni di Claude Code (settings.json): hook automatici, permessi e variabili d'ambiente.",
+   "oggetto": "Martelletto: batte sul blocchetto e la regola è approvata",
+   "infra": [
+    "impostazioni"
+   ],
+   "notion": "https://www.notion.so/407fcd1c89c68183b6bfd0328520e079",
+   "chiamate": 1,
+   "giorni": {
+    "2026-10-27": 1
+   },
+   "modi": {
+    "Caricata da Claude": 1
+   },
+   "ultimo": "2026-10-27",
+   "insieme": {
+    "trader-alerts": 1
+   }
+  },
+  "fewer-permission-prompts": {
+   "distretto": "municipio",
+   "sprite": "fewer-permission-prompts",
+   "cosa_fa": "Guarda i comandi di sola lettura che approvi più spesso e li aggiunge ai permessi del progetto, così Claude chiede meno conferme.",
+   "oggetto": "Pergamena dei permessi che si srotola, voce dopo voce",
+   "infra": [
+    "impostazioni"
+   ],
+   "notion": "https://www.notion.so/407fcd1c89c68173b85cd6ce92c7e0d5",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "setup-claude": {
+   "distretto": "municipio",
+   "sprite": "setup-claude",
+   "cosa_fa": "Configurazione guidata: installa i plugin adatti al tuo lavoro, collega i tuoi strumenti e ti fa provare una skill.",
+   "oggetto": "Mappa della città che si apre, con la puntina “sei qui”",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c681a7a439dca3a3d0517a",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
   "anthropic-skills:free-llm-apis": {
    "distretto": null,
    "sprite": null,
@@ -505,31 +657,6 @@
    "ultimo": "2026-10-18",
    "insieme": {
     "skill-scout": 1
-   }
-  },
-  "skill-scout": {
-   "distretto": null,
-   "sprite": null,
-   "cosa_fa": null,
-   "oggetto": null,
-   "infra": [],
-   "notion": null,
-   "chiamate": 8,
-   "giorni": {
-    "2026-10-18": 1,
-    "2026-10-19": 1,
-    "2026-10-25": 3,
-    "2026-10-26": 2,
-    "2026-10-27": 1
-   },
-   "modi": {
-    "Caricata da Claude": 7,
-    "Comando /": 1
-   },
-   "ultimo": "2026-10-27",
-   "insieme": {
-    "anthropic-skills:free-llm-apis": 1,
-    "pixel-art-studio": 1
    }
   },
   "anthropic-skills:pptx": {
@@ -604,25 +731,6 @@
    "ultimo": "2026-10-27",
    "insieme": {
     "skill-scout": 1
-   }
-  },
-  "update-config": {
-   "distretto": null,
-   "sprite": null,
-   "cosa_fa": null,
-   "oggetto": null,
-   "infra": [],
-   "notion": null,
-   "chiamate": 1,
-   "giorni": {
-    "2026-10-27": 1
-   },
-   "modi": {
-    "Caricata da Claude": 1
-   },
-   "ultimo": "2026-10-27",
-   "insieme": {
-    "trader-alerts": 1
    }
   }
  },
