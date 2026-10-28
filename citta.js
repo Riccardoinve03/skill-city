@@ -16,11 +16,17 @@ const INFRA = {
                desc: "I documenti ufficiali delle società quotate: 10-K, 10-Q e 8-K." },
   pacchetto: { nome: "Pacchetto trader", colore: "#3aa35f", edificio: null, titolo: "Pacchetto trader", segno: "cravatta verde",
                desc: "La configurazione comune in trader/config.json." },
+  notion:    { nome: "Connettore Notion", colore: "#eceef3", edificio: "biblioteca", titolo: "Biblioteca Notion", segno: "toppa bianca con la N",
+               desc: "Il connettore Notion: le skill con la toppa cercano nelle tue pagine e ci salvano report, wiki e decisioni." },
+  pptx:      { nome: "Skill pptx", colore: "#d24726", edificio: null, titolo: "Skill pptx", segno: "mini diapositiva arancio",
+               desc: "Il file .pptx lo crea la skill pptx di Anthropic: academic-pptx decide contenuto e struttura delle slide." },
 };
-const EDIFICIO_INFRA = { torre: "dati", banca: "broker", archivio: "edgar" };
+const EDIFICIO_INFRA = { torre: "dati", banca: "broker", archivio: "edgar", biblioteca: "notion" };
 const MODI = { "Comando /": "#ff9e6b", "Caricata da Claude": "#b49cff", "Script": "#3fc8e4" };
 const LIVELLI = [0.5, 1, 1.5, 2, 2.5, 3, 4];
-const SOTTO = new Set(["finanza", "municipio"]);       // cartellini da mettere sotto il quartiere
+// cartellini da mettere sotto il quartiere: sotto l'angolo in basso, o sotto il lato sinistro
+// (l'Università, per non coprire il Municipio)
+const CARTELLINO = { finanza: "sotto", universita: "sinistra", municipio: "sotto" };
 
 let M, D, SF, AT, ATS;              // mondo, dati, sfondo, atlante, atlante "addormentato"
 let OGGI, DURATA_ANIM;
@@ -498,9 +504,10 @@ function costruisciEtichette() {
         ? `${membri.length} skill · <span class="on">${oggi} attive oggi</span> · ${chiamate} chiamate`
         : `in costruzione · ${membri.length} prototipo`}</span></span>`;
     el.addEventListener("click", () => { seleziona({ tipo: "distretto", id: k }); inquadraDistretto(k); });
-    // sotto il quartiere se in alto c'è qualcosa (la torre, la piazza), altrimenti sopra
-    const p = d.poligono, sotto = SOTTO.has(k);
-    etichetta(el, () => sotto ? [p[2][0], p[2][1] + 12] : [p[0][0], p[0][1] - 40], { sotto });
+    // sotto il quartiere se in alto c'è qualcosa (la torre, la biblioteca, la piazza), altrimenti sopra
+    const p = d.poligono, dove = CARTELLINO[k], sotto = !!dove;
+    const q = dove === "sinistra" ? [p[2][0] + (p[3][0] - p[2][0]) / 3, p[2][1] + (p[3][1] - p[2][1]) / 3] : p[2];
+    etichetta(el, () => sotto ? [q[0], q[1] + 12] : [p[0][0], p[0][1] - 40], { sotto });
   }
   const pz = document.createElement("div");
   pz.className = "cartellino piazza";

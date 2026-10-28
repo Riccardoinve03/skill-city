@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-27T22:43+01:00",
+ "aggiornato": "2026-10-28T08:55+01:00",
  "dal": "2026-10-18",
  "totale": 65,
  "sessioni": 13,
@@ -355,10 +355,10 @@
   "scientific-thinking-literature-review": {
    "distretto": "universita",
    "sprite": "literature-review",
+   "cosa_fa": "Fa una rassegna sistematica della letteratura: piano di ricerca, selezione delle fonti, sintesi delle evidenze e controllo delle citazioni.",
+   "oggetto": "Libro rosso: spunta un segnalibro per ogni fonte selezionata",
    "infra": [],
-   "notion": null,
-   "oggetto": "Libro rosso e zaino blu",
-   "cosa_fa": "Fa una rassegna sistematica della letteratura: piano di ricerca, selezione delle fonti, sintesi e controllo delle citazioni.",
+   "notion": "https://www.notion.so/407fcd1c89c681e9b036d64ec9dd2fc9",
    "chiamate": 0,
    "giorni": {},
    "modi": {},
@@ -385,6 +385,103 @@
    "notion": null,
    "oggetto": "Fascia tricolore e cilindro",
    "cosa_fa": "Fa l'inventario delle skill e dei comandi installati e ne valuta la qualità, una per una.",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "scientific-thinking-scholar-evaluation": {
+   "distretto": "universita",
+   "sprite": "scholar-evaluation",
+   "cosa_fa": "Valuta un lavoro accademico (paper, proposta, metodi, qualità delle evidenze e delle citazioni) con una griglia ripetibile e scrive il feedback.",
+   "oggetto": "Compito corretto: la A rossa compare tratto dopo tratto",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c681acbfcfc019a73c2897",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "academic-pptx": {
+   "distretto": "universita",
+   "sprite": "academic-pptx",
+   "cosa_fa": "Imposta presentazioni accademiche (convegni, seminari, discussione della tesi): titoli che dicono la conclusione, struttura ad argomento, un grafico per slide e citazioni.",
+   "oggetto": "Lavagnetta con il grafico: la bacchetta indica una barra alla volta",
+   "infra": [
+    "pptx"
+   ],
+   "notion": "https://www.notion.so/407fcd1c89c68170ad63ee8ed577796f",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "deep-research": {
+   "distretto": "universita",
+   "sprite": "deep-research",
+   "cosa_fa": "Fa una ricerca approfondita su più fonti, confronta alternative e tendenze e scrive un report narrativo con le fonti citate.",
+   "oggetto": "Mappamondo che gira: la ricerca fa il giro del mondo",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c6817eb4b4ef236edf0959",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "learn": {
+   "distretto": "universita",
+   "sprite": "learn",
+   "cosa_fa": "Ti insegna un argomento: spiega come e perché funziona, con esempi, domande, quiz e flashcard.",
+   "oggetto": "Flashcard che si gira: davanti la domanda, dietro la risposta",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c681fbb024cd7ee29d6e01",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "convert-documents-to-markdown": {
+   "distretto": "universita",
+   "sprite": "convert-documents",
+   "cosa_fa": "Converte Word, PowerPoint, Excel, OpenDocument, RTF, EPUB, CSV e PDF in Markdown, così Claude può leggerli.",
+   "oggetto": "Imbuto: entra un PDF rosso, esce una pagina di testo",
+   "infra": [],
+   "notion": "https://www.notion.so/407fcd1c89c681aeae09cddab43c4c95",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "research-documentation": {
+   "distretto": "universita",
+   "sprite": "research-documentation",
+   "cosa_fa": "Cerca nel tuo workspace Notion, mette insieme quello che trova in più pagine e salva un report strutturato con le citazioni come nuova pagina.",
+   "oggetto": "Raccoglitore ad anelli: le linguette colorate si sfogliano una alla volta",
+   "infra": [
+    "notion"
+   ],
+   "notion": "https://www.notion.so/407fcd1c89c6819484e2d6d74841c81c",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "knowledge-capture": {
+   "distretto": "universita",
+   "sprite": "knowledge-capture",
+   "cosa_fa": "Trasforma conversazioni e discussioni in pagine Notion ordinate (wiki, FAQ, decisioni, guide) e le salva nel posto giusto, con i collegamenti.",
+   "oggetto": "Retino: cattura al volo la lampadina di un'idea",
+   "infra": [
+    "notion"
+   ],
+   "notion": "https://www.notion.so/407fcd1c89c68150913ad6d35e5e99cd",
    "chiamate": 0,
    "giorni": {},
    "modi": {},
