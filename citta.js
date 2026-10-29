@@ -32,12 +32,21 @@ const INFRA = {
                desc: "Il registratore Plaud: le skill con la capsula usano le trascrizioni delle riunioni. Lo studio sta tra Università e Impresa perché serve a lezioni e riunioni." },
   canva:     { nome: "Connettore Canva", colore: "#00c4cc", edificio: "studio", titolo: "Studio Canva", segno: "bollino turchese e viola sul fianco",
                desc: "I tuoi design Canva: le skill col bollino li cercano, li leggono, li modificano e li ridimensionano per i social." },
+  orch:      { nome: "Catena orch", colore: "#e8833a", edificio: "capannone", titolo: "Capannone della catena di montaggio", segno: "lampeggiante in cima all'elmetto",
+               desc: "Il motore di orch-pipeline: ricerca, piano, test, revisione e commit, con due cancelli che aspettano il tuo ok (il piano e il commit). Le skill col lampeggiante ci fanno passare il lavoro." },
+  github:    { nome: "GitHub", colore: "#a371f7", edificio: "magazzino", titolo: "Magazzino GitHub", segno: "gatto nero sull'elmetto",
+               desc: "I tuoi repository GitHub: issue, pull request, CI e rilasci, col comando gh (sul Mac non è ancora installato). data-scraper-agent ci gira sopra, con GitHub Actions." },
+  context7:  { nome: "Context7", colore: "#2fb37a", edificio: null, titolo: "Context7", segno: "adesivo verde col 7 sull'elmetto",
+               desc: "Il server MCP con la documentazione aggiornata delle librerie. Non è ancora installato: senza, le skill ripiegano sui siti ufficiali." },
 };
 const EDIFICIO_INFRA = { torre: "dati", banca: "broker", archivio: "edgar", biblioteca: "notion", palazzo: "skills", ufficio: "impostazioni",
-                         posta: "gmail", plaud: "plaud", studio: "canva" };
+                         posta: "gmail", plaud: "plaud", studio: "canva", capannone: "orch", magazzino: "github" };
 // Impresa: un colore per ufficio, lo stesso del cordino dei mostriciattoli e del piano nella torre (disegno/mostri.py)
 const UFFICI = { Reception: "#2fb3a0", Documenti: "#3b7dd8", Commerciale: "#8a6fd1", Marketing: "#e0679a",
                  Prodotto: "#9bd04a", Investitori: "#f2c14e", Legale: "#8e3a59", Direzione: "#f1ead8" };
+// Officina: un colore per reparto, lo stesso della striscia sull'elmetto e della piazzola (disegno/mostri.py)
+const REPARTI = { Progettazione: "#ffffff", "Archivio tecnico": "#8a5a3b", Carrozzeria: "#c8433a", Motori: "#5d6275",
+                  Collaudo: "#3aa35f", Laboratorio: "#8a6fd1", Logistica: "#3b7dd8" };
 const MODI = { "Comando /": "#ff9e6b", "Caricata da Claude": "#b49cff", "Script": "#3fc8e4" };
 const LIVELLI = [0.5, 1, 1.5, 2, 2.5, 3, 4];
 // dove va il cartellino del quartiere: di norma oltre l'angolo più esterno, sul lato rivolto fuori dalla città
@@ -816,6 +825,7 @@ function schedaSkill(nome) {
     ${s.cosa_fa ? `<p>${esc(s.cosa_fa)}</p>` : `<p>Questa skill non ha ancora una scheda: arriverà quando costruiremo il suo quartiere.</p>`}
     ${s.oggetto ? `<div class="oggetto">In mano: ${esc(s.oggetto)}</div>` : ""}
     ${s.ufficio ? `<div class="oggetto">Ufficio: <span class="etichetta-d"><i style="--c:${UFFICI[s.ufficio] || "#646a87"}"></i>${esc(s.ufficio)}</span></div>` : ""}
+    ${s.reparto ? `<div class="oggetto">Reparto: <span class="etichetta-d"><i style="--c:${REPARTI[s.reparto] || "#646a87"}"></i>${esc(s.reparto)}</span></div>` : ""}
     <div class="cifre"><div><b>${s.chiamate}</b><span>chiamate</span></div><div><b>${giorniAttivi}</b><span>giorni d'uso</span></div>
       <div><b>${esc(quando(s.ultimo))}</b><span>ultimo uso</span></div></div>
     <h3>Ultime due settimane</h3>${barreGiorni(s.giorni)}
@@ -858,15 +868,17 @@ function schedaDistretto(k) {
     ${d.aperto ? "" : `<p>Per ora qui c'è solo il prototipo del mostriciattolo. Il quartiere aprirà quando faremo le schede delle sue skill.</p>`}
     <div class="cifre"><div><b>${membri.length}</b><span>skill</span></div><div><b>${tot}</b><span>chiamate</span></div>
       <div><b>${dormono.length}</b><span>dormono</span></div></div>
-    ${membri.some(a => a.s.ufficio) ? schedaUffici(membri, max) : `<h3>Le skill, dalla più usata</h3>
+    ${membri.some(a => a.s.ufficio) ? schedaGruppi(membri, max, "ufficio", UFFICI)
+      : membri.some(a => a.s.reparto) ? schedaGruppi(membri, max, "reparto", REPARTI) : `<h3>Le skill, dalla più usata</h3>
     <div class="lista">${membri.map(a => `<button type="button" class="riga" data-skill="${esc(a.nome)}"><span>${esc(a.nome)}</span>
       <span class="n">${a.s.chiamate || "—"}</span></button><div class="barretta" style="width:${100 * a.s.chiamate / max}%"></div>`).join("")}</div>`}`;
 }
 
-// Impresa: le skill divise per ufficio, dalla Reception (piano terra) alla Direzione (ultimo piano)
-function schedaUffici(membri, max) {
-  return Object.entries(UFFICI).map(([u, c]) => {
-    const qui = membri.filter(a => a.s.ufficio === u); if (!qui.length) return "";
+// Impresa: le skill divise per ufficio, dalla Reception (piano terra) alla Direzione (ultimo piano);
+// Officina: per reparto, dalla Progettazione alla Logistica
+function schedaGruppi(membri, max, campo, colori) {
+  return Object.entries(colori).map(([u, c]) => {
+    const qui = membri.filter(a => a.s[campo] === u); if (!qui.length) return "";
     return `<h3><span class="etichetta-d"><i style="--c:${c}"></i>${esc(u)}</span></h3>
       <div class="lista">${qui.map(a => `<button type="button" class="riga" data-skill="${esc(a.nome)}"><span>${esc(a.nome)}</span>
       <span class="n">${a.s.chiamate || "—"}</span></button><div class="barretta" style="width:${100 * a.s.chiamate / max}%;background:${c}"></div>`).join("")}</div>`;
