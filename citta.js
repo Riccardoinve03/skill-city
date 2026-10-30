@@ -101,7 +101,7 @@ function immagine(src) {
 
 async function carica() {
   [M, D, SF, AT] = await Promise.all([
-    fetch("mondo.json").then(r => r.json()), fetch("dati.json", { cache: "no-store" }).then(r => r.json()),
+    fetch("mondo.json").then(r => r.json()), fetch(`dati.json?v=${Date.now()}`, { cache: "no-store" }).then(r => r.json()),
     immagine("sfondo.png"), immagine("sprite.png"),
   ]);
   OGGI = giornoDi(D.aggiornato);
