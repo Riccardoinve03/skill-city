@@ -1,8 +1,8 @@
 {
- "aggiornato": "2026-10-30T22:43+01:00",
+ "aggiornato": "2026-10-31T22:42+01:00",
  "dal": "2026-10-18",
- "totale": 75,
- "sessioni": 19,
+ "totale": 79,
+ "sessioni": 22,
  "skill": {
   "trader-alerts": {
    "distretto": "finanza",
@@ -510,22 +510,25 @@
     "skills"
    ],
    "notion": "https://www.notion.so/407fcd1c89c6811b8f40cf1229d939b4",
-   "chiamate": 8,
+   "chiamate": 10,
    "giorni": {
     "2026-10-18": 1,
     "2026-10-19": 1,
     "2026-10-25": 3,
     "2026-10-26": 2,
-    "2026-10-27": 1
+    "2026-10-27": 1,
+    "2026-10-30": 1,
+    "2026-10-31": 1
    },
    "modi": {
-    "Caricata da Claude": 7,
+    "Caricata da Claude": 9,
     "Comando /": 1
    },
-   "ultimo": "2026-10-27",
+   "ultimo": "2026-10-31",
    "insieme": {
     "anthropic-skills:free-llm-apis": 1,
-    "pixel-art-studio": 1
+    "pixel-art-studio": 1,
+    "claude-in-chrome": 1
    }
   },
   "skill-creator": {
@@ -1863,6 +1866,25 @@
    },
    "ultimo": "2026-10-21",
    "insieme": {}
+  },
+  "claude-in-chrome": {
+   "distretto": null,
+   "sprite": null,
+   "cosa_fa": null,
+   "oggetto": null,
+   "infra": [],
+   "notion": null,
+   "chiamate": 2,
+   "giorni": {
+    "2026-10-30": 2
+   },
+   "modi": {
+    "Caricata da Claude": 2
+   },
+   "ultimo": "2026-10-30",
+   "insieme": {
+    "skill-scout": 1
+   }
   }
  },
  "strade": [
@@ -1989,6 +2011,11 @@
   [
    "trader-data",
    "trader-news",
+   1
+  ],
+  [
+   "claude-in-chrome",
+   "skill-scout",
    1
   ]
  ],
@@ -2162,8 +2189,8 @@
    ]
   },
   "2026-10-30": {
-   "chiamate": 5,
-   "sessioni": 3,
+   "chiamate": 8,
+   "sessioni": 5,
    "ordine": [
     [
      "trader-data",
@@ -2175,6 +2202,24 @@
     ],
     [
      "trader-news",
+     1
+    ],
+    [
+     "skill-scout",
+     1
+    ],
+    [
+     "claude-in-chrome",
+     2
+    ]
+   ]
+  },
+  "2026-10-31": {
+   "chiamate": 1,
+   "sessioni": 1,
+   "ordine": [
+    [
+     "skill-scout",
      1
     ]
    ]
