@@ -38,6 +38,10 @@ const INFRA = {
                desc: "I tuoi repository GitHub: issue, pull request, CI e rilasci, col comando gh (sul Mac non è ancora installato). data-scraper-agent ci gira sopra, con GitHub Actions." },
   context7:  { nome: "Context7", colore: "#2fb37a", edificio: null, titolo: "Context7", segno: "adesivo verde col 7 sull'elmetto",
                desc: "Il server MCP con la documentazione aggiornata delle librerie. Non è ancora installato: senza, le skill ripiegano sui siti ufficiali." },
+  ponytail:  { nome: "Pacchetto ponytail", colore: "#d9718f", edificio: null, titolo: "Pacchetto ponytail", segno: "codino grigio con l'elastico rosa",
+               desc: "Il plugin ponytail e i suoi hook: a ogni sessione accendono la modalità «sviluppatore pigro», che cerca la soluzione più corta che funziona. Il registro dei compiti resta sul Mac." },
+  freellm:   { nome: "Server free-llm", colore: "#f4a7bb", edificio: null, titolo: "Server free-llm", segno: "nessuno: lo usa solo free-llm-apis",
+               desc: "Il server MCP che passa ai modelli gratuiti (Gemini, Groq, Mistral…) i lavori lunghi e semplici, come riassunti e traduzioni, per risparmiare i limiti di Claude. Usa le chiavi configurate con free-llm-apis." },
 };
 const EDIFICIO_INFRA = { torre: "dati", banca: "broker", archivio: "edgar", biblioteca: "notion", palazzo: "skills", ufficio: "impostazioni",
                          posta: "gmail", plaud: "plaud", studio: "canva", capannone: "orch", magazzino: "github" };
@@ -393,6 +397,14 @@ function disegnaMondo(t) {
       const spento = (infraSel && infraSel !== k) || (nomeSel && nomeSel !== e.nome);
       const a = acceso ? 1 : spento ? .12 : .4;
       linea(c[0], c[1], e.x, e.y, hexA(inf.colore, a), [3, 3], -Math.floor(t / 90));
+    }
+    // "lavora con" (dalla scheda): una skill verso quelle che usa insieme a lei, col colore del loro quartiere
+    for (const e of abitanti) for (const n of Object.keys(e.s.lavora_con || {})) {
+      const p0 = posizione(e.nome), p1 = posizione(n), d = D.skill[n] && M.distretti[D.skill[n].distretto];
+      if (!p0 || !p1 || !d) continue;
+      const acceso = nomeSel === e.nome || nomeSel === n;
+      const a = acceso ? .95 : nomeSel || infraSel ? .08 : .35;
+      linea(p0[0], p0[1], p1[0], p1[1], hexA(d.colore, a), [1, 3], -Math.floor(t / 120));
     }
   }
 
@@ -819,6 +831,8 @@ function schedaSkill(nome) {
   const maxI = insieme.length ? insieme[0][1] : 1;
   const statoTesto = st === "oggi" ? "al lavoro oggi" : st === "settimana" ? "usata questa settimana" : s.chiamate ? "dorme da più di una settimana" : "dorme: mai usata da quando registro";
   const d = s.distretto && M.distretti[s.distretto];
+  const lavora = Object.entries(s.lavora_con || {}).concat(Object.entries(D.skill)
+    .filter(([, x]) => x.lavora_con && x.lavora_con[nome]).map(([n, x]) => [n, x.lavora_con[nome]]));
   return `
     <div class="testa-scheda">${ritratto(e ? e.sprite : "turista")}
       <div><h2>${esc(nome)}</h2>${etichettaDistretto(s.distretto)}<br><span class="stato ${st}">${statoTesto}</span></div></div>
@@ -832,6 +846,8 @@ function schedaSkill(nome) {
     <h3>Come la usi</h3>${barraModi(s.modi)}
     ${s.infra.length ? `<h3>Infrastrutture condivise</h3><div class="pillole">${s.infra.map(k =>
       `<button type="button" class="pillola" data-infra="${k}" style="border-color:${INFRA[k].colore}">${esc(INFRA[k].nome)} <small>${esc(INFRA[k].segno)}</small></button>`).join("")}</div>` : ""}
+    ${lavora.length ? `<h3>Lavora con</h3><div class="lista">${lavora.map(([n, perche]) => `<button type="button" class="riga" data-skill="${esc(n)}">
+      <span>${esc(n)} <small>${esc(perche)}</small></span>${etichettaDistretto(D.skill[n] && D.skill[n].distretto)}</button>`).join("")}</div>` : ""}
     <h3>Usata insieme a</h3>
     ${insieme.length ? `<div class="lista">${insieme.map(([n, k]) => `<button type="button" class="riga" data-skill="${esc(n)}">
       <span>${esc(n)}</span><span class="n">${k}×</span></button><div class="barretta" style="width:${100 * k / maxI}%"></div>`).join("")}</div>`

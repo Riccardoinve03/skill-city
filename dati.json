@@ -1,7 +1,7 @@
 {
- "aggiornato": "2026-10-31T22:42+01:00",
+ "aggiornato": "2026-11-01T15:46+01:00",
  "dal": "2026-10-18",
- "totale": 79,
+ "totale": 84,
  "sessioni": 22,
  "skill": {
   "trader-alerts": {
@@ -526,7 +526,7 @@
    },
    "ultimo": "2026-10-31",
    "insieme": {
-    "anthropic-skills:free-llm-apis": 1,
+    "free-llm-apis": 1,
     "pixel-art-studio": 1,
     "claude-in-chrome": 1
    }
@@ -1831,13 +1831,113 @@
    "ultimo": null,
    "insieme": {}
   },
-  "anthropic-skills:free-llm-apis": {
-   "distretto": null,
-   "sprite": null,
-   "cosa_fa": null,
-   "oggetto": null,
+  "teach": {
+   "distretto": "universita",
+   "sprite": "teach",
+   "cosa_fa": "Ti fa da insegnante su un argomento per più sessioni: parte dal perché vuoi impararlo, prepara lezioni in HTML e schede di ripasso, tiene un glossario e un diario di quello che hai imparato.",
+   "oggetto": "Lavagnetta: il gesso scrive la lezione, poi arriva la stellina d'oro",
    "infra": [],
-   "notion": null,
+   "notion": "https://www.notion.so/40bfcd1c89c681929f6ff63f3b6e2df0",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "anatomy": {
+   "distretto": "universita",
+   "sprite": "anatomy",
+   "cosa_fa": "Spiega un'idea tecnica disegnandola come un oggetto vero: figure isometriche interattive in SVG, con parti che si muovono e valori dal vivo, e se serve effetti WebGL o 3D. Le stampa anche in PDF A4.",
+   "oggetto": "Cubo isometrico: il coperchio si alza e mostra il meccanismo d'oro",
+   "infra": [],
+   "notion": "https://www.notion.so/40bfcd1c89c681aab923eccec9c54c4d",
+   "lavora_con": {
+    "teach": "le figure che spiegano i concetti delle lezioni",
+    "frontend-slides": "la figura dentro una presentazione HTML",
+    "playground": "una figura da esplorare coi controlli",
+    "frontend-design": "la pagina o il sito intorno alla figura",
+    "react-patterns": "la figura dentro un sito React: anatomy ha un kit apposta",
+    "nextjs-turbopack": "la figura dentro un sito Next.js"
+   },
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "ponytail": {
+   "distretto": "municipio",
+   "sprite": "ponytail",
+   "cosa_fa": "La modalità «sviluppatore pigro»: Claude scrive la soluzione più corta che risolve davvero il problema, senza aggiunte che nessuno ha chiesto, e alla fine dice cosa ha saltato. Si accende da sola in ogni sessione (livelli lite, full e ultra).",
+   "oggetto": "Forbici: tagliano il foglio del codice e restano solo le righe che servono",
+   "infra": [
+    "ponytail"
+   ],
+   "notion": "https://www.notion.so/40bfcd1c89c681839cfee902ba7f7893",
+   "chiamate": 5,
+   "giorni": {
+    "2026-11-01": 5
+   },
+   "modi": {
+    "Comando /": 5
+   },
+   "ultimo": "2026-11-01",
+   "insieme": {}
+  },
+  "ponytail-review": {
+   "distretto": "municipio",
+   "sprite": "ponytail-review",
+   "cosa_fa": "Rivede una modifica: se la logica è giusta, se è sicura, se regge il carico, se il codice a rischio ha i test e se ogni riga serve. Spiega ogni problema in parole semplici.",
+   "oggetto": "Lente sulle righe aggiunte e tolte, poi la spunta verde",
+   "infra": [
+    "ponytail"
+   ],
+   "notion": "https://www.notion.so/40bfcd1c89c6810b9af3d2470629df5d",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "ponytail-audit": {
+   "distretto": "municipio",
+   "sprite": "ponytail-audit",
+   "cosa_fa": "Controlla un intero progetto e mette i problemi in classifica: bug, falle di sicurezza, punti lenti, codice rischioso senza test e cosa si può cancellare. Non modifica niente.",
+   "oggetto": "Classifica dei problemi: rosso, giallo, verde",
+   "infra": [
+    "ponytail"
+   ],
+   "notion": "https://www.notion.so/40bfcd1c89c6814f8fbffc65c511d5e7",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "ponytail-debt": {
+   "distretto": "municipio",
+   "sprite": "ponytail-debt",
+   "cosa_fa": "Elenca le scorciatoie lasciate nel codice (i commenti «shortcut:») come un registro dei debiti da sistemare più avanti. Non modifica niente.",
+   "oggetto": "Palla al piede: sul cartellino conta le scorciatoie",
+   "infra": [
+    "ponytail"
+   ],
+   "notion": "https://www.notion.so/40bfcd1c89c6818695b6ee9935b684b6",
+   "chiamate": 0,
+   "giorni": {},
+   "modi": {},
+   "ultimo": null,
+   "insieme": {}
+  },
+  "free-llm-apis": {
+   "distretto": "municipio",
+   "sprite": "free-llm-apis",
+   "cosa_fa": "Ti guida a ottenere le chiavi gratuite dei fornitori di modelli (Gemini, Groq, Mistral…) e a collegarle, così i lavori lunghi e semplici passano a loro e risparmi i limiti di Claude.",
+   "oggetto": "Salvadanaio: ogni lavoro passato ai modelli gratuiti è una moneta risparmiata",
+   "infra": [
+    "freellm"
+   ],
+   "notion": "https://www.notion.so/40bfcd1c89c681059f25ff350368c89a",
    "chiamate": 1,
    "giorni": {
     "2026-10-18": 1
@@ -1914,7 +2014,7 @@
    2
   ],
   [
-   "anthropic-skills:free-llm-apis",
+   "free-llm-apis",
    "skill-scout",
    1
   ],
@@ -2025,7 +2125,7 @@
    "sessioni": 2,
    "ordine": [
     [
-     "anthropic-skills:free-llm-apis",
+     "free-llm-apis",
      1
     ],
     [
@@ -2221,6 +2321,16 @@
     [
      "skill-scout",
      1
+    ]
+   ]
+  },
+  "2026-11-01": {
+   "chiamate": 5,
+   "sessioni": 1,
+   "ordine": [
+    [
+     "ponytail",
+     5
     ]
    ]
   }
