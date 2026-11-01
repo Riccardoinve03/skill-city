@@ -104,9 +104,10 @@ function immagine(src) {
 }
 
 async function carica() {
+  const v = `?v=${Date.now()}`;  // dentro Notion il riquadro tiene i file in cache: pianta e figure si riscaricano a ogni apertura
   [M, D, SF, AT] = await Promise.all([
-    fetch("mondo.json").then(r => r.json()), fetch(`dati.json?v=${Date.now()}`, { cache: "no-store" }).then(r => r.json()),
-    immagine("sfondo.png"), immagine("sprite.png"),
+    fetch(`mondo.json${v}`, { cache: "no-store" }).then(r => r.json()), fetch(`dati.json${v}`, { cache: "no-store" }).then(r => r.json()),
+    immagine(`sfondo.png${v}`), immagine(`sprite.png${v}`),
   ]);
   OGGI = giornoDi(D.aggiornato);
   DURATA_ANIM = M.durate.reduce((a, b) => a + b, 0);
