@@ -1,8 +1,8 @@
 {
- "aggiornato": "2026-11-03T22:32+01:00",
+ "aggiornato": "2026-11-04T22:42+01:00",
  "dal": "2026-10-18",
- "totale": 85,
- "sessioni": 23,
+ "totale": 89,
+ "sessioni": 24,
  "skill": {
   "trader-alerts": {
    "distretto": "finanza",
@@ -89,14 +89,15 @@
     "pacchetto"
    ],
    "notion": "https://www.notion.so/406fcd1c89c6810e8ac2d0db3fb321dd",
-   "chiamate": 6,
+   "chiamate": 7,
    "giorni": {
-    "2026-10-27": 6
+    "2026-10-27": 6,
+    "2026-11-04": 1
    },
    "modi": {
-    "Script": 6
+    "Script": 7
    },
-   "ultimo": "2026-10-27",
+   "ultimo": "2026-11-04",
    "insieme": {
     "trader-timemachine": 1,
     "trader-alerts": 5,
@@ -214,14 +215,15 @@
     "pacchetto"
    ],
    "notion": "https://www.notion.so/406fcd1c89c6817d8ffdc58d9813f64b",
-   "chiamate": 1,
+   "chiamate": 2,
    "giorni": {
-    "2026-10-27": 1
+    "2026-10-27": 1,
+    "2026-11-04": 1
    },
    "modi": {
-    "Script": 1
+    "Script": 2
    },
-   "ultimo": "2026-10-27",
+   "ultimo": "2026-11-04",
    "insieme": {
     "trader-broker": 1,
     "trader-scanner": 1
@@ -1875,14 +1877,15 @@
     "ponytail"
    ],
    "notion": "https://www.notion.so/40bfcd1c89c681839cfee902ba7f7893",
-   "chiamate": 5,
+   "chiamate": 7,
    "giorni": {
-    "2026-11-01": 5
+    "2026-11-01": 5,
+    "2026-11-03": 2
    },
    "modi": {
-    "Comando /": 5
+    "Comando /": 7
    },
-   "ultimo": "2026-11-01",
+   "ultimo": "2026-11-03",
    "insieme": {}
   },
   "ponytail-review": {
@@ -2336,11 +2339,29 @@
    ]
   },
   "2026-11-03": {
-   "chiamate": 1,
+   "chiamate": 3,
    "sessioni": 1,
    "ordine": [
     [
      "trader-alerts",
+     1
+    ],
+    [
+     "ponytail",
+     2
+    ]
+   ]
+  },
+  "2026-11-04": {
+   "chiamate": 2,
+   "sessioni": 1,
+   "ordine": [
+    [
+     "trader-broker",
+     1
+    ],
+    [
+     "trader-journal",
      1
     ]
    ]
