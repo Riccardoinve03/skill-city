@@ -1,8 +1,8 @@
 {
- "aggiornato": "2026-11-10T10:57+01:00",
+ "aggiornato": "2026-11-10T22:42+01:00",
  "dal": "2026-10-18",
- "totale": 93,
- "sessioni": 27,
+ "totale": 95,
+ "sessioni": 29,
  "skill": {
   "trader-alerts": {
    "distretto": "finanza",
@@ -515,7 +515,7 @@
     "skills"
    ],
    "notion": "https://www.notion.so/407fcd1c89c6811b8f40cf1229d939b4",
-   "chiamate": 10,
+   "chiamate": 12,
    "giorni": {
     "2026-10-18": 1,
     "2026-10-19": 1,
@@ -523,13 +523,14 @@
     "2026-10-26": 2,
     "2026-10-27": 1,
     "2026-10-30": 1,
-    "2026-10-31": 1
+    "2026-10-31": 1,
+    "2026-11-10": 2
    },
    "modi": {
-    "Caricata da Claude": 9,
+    "Caricata da Claude": 11,
     "Comando /": 1
    },
-   "ultimo": "2026-10-31",
+   "ultimo": "2026-11-10",
    "insieme": {
     "free-llm-apis": 1,
     "pixel-art-studio": 1,
@@ -2384,6 +2385,16 @@
    "ordine": [
     [
      "trader-news",
+     2
+    ]
+   ]
+  },
+  "2026-11-10": {
+   "chiamate": 2,
+   "sessioni": 2,
+   "ordine": [
+    [
+     "skill-scout",
      2
     ]
    ]
