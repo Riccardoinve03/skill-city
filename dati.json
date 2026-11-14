@@ -1,8 +1,8 @@
 {
- "aggiornato": "2026-11-14T11:21+01:00",
+ "aggiornato": "2026-11-14T22:43+01:00",
  "dal": "2026-10-18",
- "totale": 95,
- "sessioni": 29,
+ "totale": 96,
+ "sessioni": 30,
  "skill": {
   "trader-alerts": {
    "distretto": "finanza",
@@ -1992,6 +1992,23 @@
    "insieme": {
     "skill-scout": 1
    }
+  },
+  "reverse-engineering:reverse-engineering": {
+   "distretto": null,
+   "sprite": null,
+   "cosa_fa": null,
+   "oggetto": null,
+   "infra": [],
+   "notion": null,
+   "chiamate": 1,
+   "giorni": {
+    "2026-11-14": 1
+   },
+   "modi": {
+    "Caricata da Claude": 1
+   },
+   "ultimo": "2026-11-14",
+   "insieme": {}
   }
  },
  "strade": [
@@ -2396,6 +2413,16 @@
     [
      "skill-scout",
      2
+    ]
+   ]
+  },
+  "2026-11-14": {
+   "chiamate": 1,
+   "sessioni": 1,
+   "ordine": [
+    [
+     "reverse-engineering:reverse-engineering",
+     1
     ]
    ]
   }
