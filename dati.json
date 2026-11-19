@@ -1,8 +1,8 @@
 {
- "aggiornato": "2026-11-18T22:37+01:00",
+ "aggiornato": "2026-11-19T22:42+01:00",
  "dal": "2026-10-18",
- "totale": 97,
- "sessioni": 31,
+ "totale": 98,
+ "sessioni": 32,
  "skill": {
   "trader-alerts": {
    "distretto": "finanza",
@@ -14,7 +14,7 @@
     "pacchetto"
    ],
    "notion": "https://www.notion.so/406fcd1c89c68136a3a9e0f86cc35e89",
-   "chiamate": 25,
+   "chiamate": 26,
    "giorni": {
     "2026-10-26": 2,
     "2026-10-27": 13,
@@ -23,12 +23,13 @@
     "2026-10-30": 2,
     "2026-11-03": 1,
     "2026-11-05": 2,
-    "2026-11-17": 1
+    "2026-11-17": 1,
+    "2026-11-19": 1
    },
    "modi": {
-    "Script": 25
+    "Script": 26
    },
-   "ultimo": "2026-11-17",
+   "ultimo": "2026-11-19",
    "insieme": {
     "trader-backtest": 1,
     "trader-data": 5,
@@ -2428,6 +2429,16 @@
    ]
   },
   "2026-11-17": {
+   "chiamate": 1,
+   "sessioni": 1,
+   "ordine": [
+    [
+     "trader-alerts",
+     1
+    ]
+   ]
+  },
+  "2026-11-19": {
    "chiamate": 1,
    "sessioni": 1,
    "ordine": [
