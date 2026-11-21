@@ -1,8 +1,8 @@
 {
- "aggiornato": "2026-11-20T23:00+01:00",
+ "aggiornato": "2026-11-21T22:52+01:00",
  "dal": "2026-10-18",
- "totale": 343,
- "sessioni": 46,
+ "totale": 347,
+ "sessioni": 47,
  "skill": {
   "trader-alerts": {
    "distretto": "finanza",
@@ -691,7 +691,7 @@
     "skills"
    ],
    "notion": "https://www.notion.so/407fcd1c89c6811b8f40cf1229d939b4",
-   "chiamate": 12,
+   "chiamate": 13,
    "giorni": {
     "2026-10-18": 1,
     "2026-10-19": 1,
@@ -700,17 +700,19 @@
     "2026-10-27": 1,
     "2026-10-30": 1,
     "2026-10-31": 1,
-    "2026-11-10": 2
+    "2026-11-10": 2,
+    "2026-11-21": 1
    },
    "modi": {
-    "Caricata da Claude": 11,
+    "Caricata da Claude": 12,
     "Comando /": 1
    },
-   "ultimo": "2026-11-10",
+   "ultimo": "2026-11-21",
    "insieme": {
     "free-llm-apis": 1,
     "pixel-art-studio": 1,
-    "claude-in-chrome": 1
+    "claude-in-chrome": 1,
+    "watchvideo": 1
    }
   },
   "skill-creator": {
@@ -2056,15 +2058,16 @@
     "ponytail"
    ],
    "notion": "https://www.notion.so/40bfcd1c89c681839cfee902ba7f7893",
-   "chiamate": 7,
+   "chiamate": 9,
    "giorni": {
     "2026-11-01": 5,
-    "2026-11-03": 2
+    "2026-11-03": 2,
+    "2026-11-21": 2
    },
    "modi": {
-    "Comando /": 7
+    "Comando /": 9
    },
-   "ultimo": "2026-11-03",
+   "ultimo": "2026-11-21",
    "insieme": {
     "trader-backtest": 1
    }
@@ -2204,6 +2207,25 @@
    },
    "ultimo": "2026-11-20",
    "insieme": {}
+  },
+  "watchvideo": {
+   "distretto": null,
+   "sprite": null,
+   "cosa_fa": null,
+   "oggetto": null,
+   "infra": [],
+   "notion": null,
+   "chiamate": 1,
+   "giorni": {
+    "2026-11-21": 1
+   },
+   "modi": {
+    "Caricata da Claude": 1
+   },
+   "ultimo": "2026-11-21",
+   "insieme": {
+    "skill-scout": 1
+   }
   }
  },
  "strade": [
@@ -2395,6 +2417,11 @@
   [
    "trader-journal",
    "trader-risk",
+   1
+  ],
+  [
+   "skill-scout",
+   "watchvideo",
    1
   ]
  ],
@@ -3347,6 +3374,24 @@
     ],
     [
      "claude-api",
+     1
+    ]
+   ]
+  },
+  "2026-11-21": {
+   "chiamate": 4,
+   "sessioni": 2,
+   "ordine": [
+    [
+     "ponytail",
+     2
+    ],
+    [
+     "skill-scout",
+     1
+    ],
+    [
+     "watchvideo",
      1
     ]
    ]
