@@ -1,8 +1,8 @@
 {
- "aggiornato": "2026-11-22T22:42+01:00",
+ "aggiornato": "2026-11-23T22:43+01:00",
  "dal": "2026-10-18",
- "totale": 347,
- "sessioni": 47,
+ "totale": 362,
+ "sessioni": 48,
  "skill": {
   "trader-alerts": {
    "distretto": "finanza",
@@ -14,7 +14,7 @@
     "pacchetto"
    ],
    "notion": "https://www.notion.so/406fcd1c89c68136a3a9e0f86cc35e89",
-   "chiamate": 62,
+   "chiamate": 63,
    "giorni": {
     "2026-10-26": 2,
     "2026-10-27": 13,
@@ -35,14 +35,15 @@
     "2026-11-17": 4,
     "2026-11-18": 6,
     "2026-11-19": 5,
-    "2026-11-20": 1
+    "2026-11-20": 1,
+    "2026-11-23": 1
    },
    "modi": {
-    "Script": 62
+    "Script": 63
    },
-   "ultimo": "2026-11-20",
+   "ultimo": "2026-11-23",
    "insieme": {
-    "trader-backtest": 17,
+    "trader-backtest": 18,
     "trader-data": 8,
     "trader-pro": 1,
     "trader-entry": 1,
@@ -80,7 +81,7 @@
     "pacchetto"
    ],
    "notion": "https://www.notion.so/406fcd1c89c6812eb575ce3336c1d9ea",
-   "chiamate": 20,
+   "chiamate": 21,
    "giorni": {
     "2026-10-26": 2,
     "2026-10-27": 1,
@@ -98,15 +99,16 @@
     "2026-11-17": 1,
     "2026-11-18": 1,
     "2026-11-19": 1,
-    "2026-11-20": 1
+    "2026-11-20": 1,
+    "2026-11-23": 1
    },
    "modi": {
-    "Script": 20
+    "Script": 21
    },
-   "ultimo": "2026-11-20",
+   "ultimo": "2026-11-23",
    "insieme": {
-    "trader-data": 20,
-    "trader-alerts": 17,
+    "trader-data": 21,
+    "trader-alerts": 18,
     "trader-pro": 1,
     "ponytail": 1,
     "trader-journal": 1
@@ -122,7 +124,7 @@
     "pacchetto"
    ],
    "notion": "https://www.notion.so/406fcd1c89c6810e8ac2d0db3fb321dd",
-   "chiamate": 40,
+   "chiamate": 43,
    "giorni": {
     "2026-10-27": 6,
     "2026-10-29": 6,
@@ -136,14 +138,15 @@
     "2026-11-17": 4,
     "2026-11-18": 4,
     "2026-11-19": 5,
-    "2026-11-20": 3
+    "2026-11-20": 3,
+    "2026-11-23": 3
    },
    "modi": {
-    "Script": 40
+    "Script": 43
    },
-   "ultimo": "2026-11-20",
+   "ultimo": "2026-11-23",
    "insieme": {
-    "trader-timemachine": 7,
+    "trader-timemachine": 8,
     "trader-alerts": 32,
     "trader-risk": 7,
     "trader-data": 2,
@@ -161,7 +164,7 @@
     "pacchetto"
    ],
    "notion": "https://www.notion.so/406fcd1c89c681b1a1eddcf75ec21c1b",
-   "chiamate": 13,
+   "chiamate": 14,
    "giorni": {
     "2026-10-27": 1,
     "2026-10-29": 1,
@@ -175,15 +178,16 @@
     "2026-11-17": 1,
     "2026-11-18": 1,
     "2026-11-19": 1,
-    "2026-11-20": 1
+    "2026-11-20": 1,
+    "2026-11-23": 1
    },
    "modi": {
-    "Script": 13
+    "Script": 14
    },
-   "ultimo": "2026-11-20",
+   "ultimo": "2026-11-23",
    "insieme": {
-    "trader-exit": 7,
-    "trader-risk": 12,
+    "trader-exit": 8,
+    "trader-risk": 13,
     "trader-timemachine": 6,
     "trader-entry": 1
    }
@@ -198,7 +202,7 @@
     "pacchetto"
    ],
    "notion": "https://www.notion.so/406fcd1c89c68134acd6ef482a326a99",
-   "chiamate": 31,
+   "chiamate": 32,
    "giorni": {
     "2026-10-26": 7,
     "2026-10-27": 4,
@@ -217,18 +221,19 @@
     "2026-11-17": 1,
     "2026-11-18": 1,
     "2026-11-19": 2,
-    "2026-11-20": 1
+    "2026-11-20": 1,
+    "2026-11-23": 1
    },
    "modi": {
-    "Script": 31
+    "Script": 32
    },
-   "ultimo": "2026-11-20",
+   "ultimo": "2026-11-23",
    "insieme": {
-    "trader-backtest": 20,
+    "trader-backtest": 21,
     "trader-alerts": 8,
     "trader-scanner": 1,
     "trader-broker": 2,
-    "trader-journal": 17,
+    "trader-journal": 18,
     "trader-news": 1
    }
   },
@@ -242,7 +247,7 @@
     "pacchetto"
    ],
    "notion": "https://www.notion.so/406fcd1c89c6818c910cf4c136a0b01b",
-   "chiamate": 15,
+   "chiamate": 16,
    "giorni": {
     "2026-10-27": 2,
     "2026-10-29": 2,
@@ -256,18 +261,19 @@
     "2026-11-17": 1,
     "2026-11-18": 1,
     "2026-11-19": 1,
-    "2026-11-20": 1
+    "2026-11-20": 1,
+    "2026-11-23": 1
    },
    "modi": {
-    "Script": 15
+    "Script": 16
    },
-   "ultimo": "2026-11-20",
+   "ultimo": "2026-11-23",
    "insieme": {
     "trader-scanner": 1,
-    "trader-news": 14,
+    "trader-news": 15,
     "trader-alerts": 1,
     "trader-broker": 1,
-    "trader-exit": 11,
+    "trader-exit": 12,
     "trader-budget": 1
    }
   },
@@ -281,7 +287,7 @@
     "pacchetto"
    ],
    "notion": "https://www.notion.so/406fcd1c89c68165a11cddb502ee7fa4",
-   "chiamate": 13,
+   "chiamate": 14,
    "giorni": {
     "2026-10-27": 1,
     "2026-10-29": 1,
@@ -295,16 +301,17 @@
     "2026-11-17": 1,
     "2026-11-18": 1,
     "2026-11-19": 1,
-    "2026-11-20": 1
+    "2026-11-20": 1,
+    "2026-11-23": 1
    },
    "modi": {
-    "Script": 13
+    "Script": 14
    },
-   "ultimo": "2026-11-20",
+   "ultimo": "2026-11-23",
    "insieme": {
     "trader-alerts": 1,
-    "trader-budget": 7,
-    "trader-entry": 11,
+    "trader-budget": 8,
+    "trader-entry": 12,
     "trader-timemachine": 7
    }
   },
@@ -318,7 +325,7 @@
     "pacchetto"
    ],
    "notion": "https://www.notion.so/406fcd1c89c6817d8ffdc58d9813f64b",
-   "chiamate": 32,
+   "chiamate": 34,
    "giorni": {
     "2026-10-27": 1,
     "2026-10-29": 2,
@@ -335,16 +342,17 @@
     "2026-11-17": 2,
     "2026-11-18": 2,
     "2026-11-19": 3,
-    "2026-11-20": 2
+    "2026-11-20": 2,
+    "2026-11-23": 2
    },
    "modi": {
-    "Script": 32
+    "Script": 34
    },
-   "ultimo": "2026-11-20",
+   "ultimo": "2026-11-23",
    "insieme": {
     "trader-broker": 2,
-    "trader-scanner": 3,
-    "trader-data": 17,
+    "trader-scanner": 4,
+    "trader-data": 18,
     "trader-backtest": 1,
     "trader-risk": 1
    }
@@ -360,7 +368,7 @@
     "pacchetto"
    ],
    "notion": "https://www.notion.so/406fcd1c89c681e393b5e97c3e6694f4",
-   "chiamate": 29,
+   "chiamate": 30,
    "giorni": {
     "2026-10-27": 1,
     "2026-10-29": 3,
@@ -376,15 +384,16 @@
     "2026-11-17": 1,
     "2026-11-18": 1,
     "2026-11-19": 1,
-    "2026-11-20": 1
+    "2026-11-20": 1,
+    "2026-11-23": 1
    },
    "modi": {
-    "Script": 29
+    "Script": 30
    },
-   "ultimo": "2026-11-20",
+   "ultimo": "2026-11-23",
    "insieme": {
-    "trader-entry": 14,
-    "trader-scanner": 14,
+    "trader-entry": 15,
+    "trader-scanner": 15,
     "trader-alerts": 1,
     "trader-data": 1
    }
@@ -436,7 +445,7 @@
     "pacchetto"
    ],
    "notion": "https://www.notion.so/406fcd1c89c6816f9afeef77891e6094",
-   "chiamate": 15,
+   "chiamate": 16,
    "giorni": {
     "2026-10-27": 2,
     "2026-10-29": 1,
@@ -450,15 +459,16 @@
     "2026-11-17": 1,
     "2026-11-18": 1,
     "2026-11-19": 2,
-    "2026-11-20": 1
+    "2026-11-20": 1,
+    "2026-11-23": 1
    },
    "modi": {
-    "Script": 15
+    "Script": 16
    },
-   "ultimo": "2026-11-20",
+   "ultimo": "2026-11-23",
    "insieme": {
-    "trader-budget": 12,
-    "trader-timemachine": 6,
+    "trader-budget": 13,
+    "trader-timemachine": 7,
     "trader-broker": 7,
     "trader-alerts": 2,
     "trader-journal": 1
@@ -474,7 +484,7 @@
     "pacchetto"
    ],
    "notion": "https://www.notion.so/406fcd1c89c681698556ec111a7307c0",
-   "chiamate": 30,
+   "chiamate": 31,
    "giorni": {
     "2026-10-27": 6,
     "2026-10-29": 2,
@@ -490,17 +500,18 @@
     "2026-11-17": 2,
     "2026-11-18": 2,
     "2026-11-19": 2,
-    "2026-11-20": 2
+    "2026-11-20": 2,
+    "2026-11-23": 1
    },
    "modi": {
-    "Script": 30
+    "Script": 31
    },
-   "ultimo": "2026-11-20",
+   "ultimo": "2026-11-23",
    "insieme": {
     "trader-data": 1,
     "trader-entry": 1,
-    "trader-journal": 3,
-    "trader-news": 14,
+    "trader-journal": 4,
+    "trader-news": 15,
     "trader-alerts": 1
    }
   },
@@ -514,7 +525,7 @@
     "pacchetto"
    ],
    "notion": "https://www.notion.so/406fcd1c89c681c7b259caab7f6386f6",
-   "chiamate": 13,
+   "chiamate": 14,
    "giorni": {
     "2026-10-27": 1,
     "2026-10-29": 1,
@@ -528,15 +539,16 @@
     "2026-11-17": 1,
     "2026-11-18": 1,
     "2026-11-19": 1,
-    "2026-11-20": 1
+    "2026-11-20": 1,
+    "2026-11-23": 1
    },
    "modi": {
-    "Script": 13
+    "Script": 14
    },
-   "ultimo": "2026-11-20",
+   "ultimo": "2026-11-23",
    "insieme": {
-    "trader-risk": 6,
-    "trader-broker": 7,
+    "trader-risk": 7,
+    "trader-broker": 8,
     "trader-exit": 7,
     "trader-budget": 6
    }
@@ -2237,37 +2249,37 @@
   [
    "trader-backtest",
    "trader-data",
-   20
+   21
   ],
   [
    "trader-alerts",
    "trader-backtest",
-   17
+   18
   ],
   [
    "trader-data",
    "trader-journal",
-   17
+   18
   ],
   [
    "trader-entry",
    "trader-news",
-   14
+   15
   ],
   [
    "trader-news",
    "trader-scanner",
-   14
+   15
   ],
   [
    "trader-budget",
    "trader-risk",
-   12
+   13
   ],
   [
    "trader-entry",
    "trader-exit",
-   11
+   12
   ],
   [
    "trader-alerts",
@@ -2277,10 +2289,15 @@
   [
    "trader-budget",
    "trader-exit",
-   7
+   8
   ],
   [
    "trader-broker",
+   "trader-timemachine",
+   8
+  ],
+  [
+   "trader-risk",
    "trader-timemachine",
    7
   ],
@@ -2295,11 +2312,6 @@
    7
   ],
   [
-   "trader-risk",
-   "trader-timemachine",
-   6
-  ],
-  [
    "trader-budget",
    "trader-timemachine",
    6
@@ -2307,7 +2319,7 @@
   [
    "trader-journal",
    "trader-scanner",
-   3
+   4
   ],
   [
    "trader-alerts",
@@ -3393,6 +3405,60 @@
     [
      "watchvideo",
      1
+    ]
+   ]
+  },
+  "2026-11-23": {
+   "chiamate": 15,
+   "sessioni": 1,
+   "ordine": [
+    [
+     "trader-alerts",
+     1
+    ],
+    [
+     "trader-backtest",
+     1
+    ],
+    [
+     "trader-data",
+     1
+    ],
+    [
+     "trader-journal",
+     2
+    ],
+    [
+     "trader-scanner",
+     1
+    ],
+    [
+     "trader-news",
+     1
+    ],
+    [
+     "trader-entry",
+     1
+    ],
+    [
+     "trader-exit",
+     1
+    ],
+    [
+     "trader-budget",
+     1
+    ],
+    [
+     "trader-risk",
+     1
+    ],
+    [
+     "trader-timemachine",
+     1
+    ],
+    [
+     "trader-broker",
+     3
     ]
    ]
   }
